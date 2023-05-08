@@ -12,6 +12,24 @@
 
 ## Modules Specification
 
+### cpuTop
+
+#### Input
+
+- `fpga_rst` // active high
+- `fpga_clk`
+- `[15:0] switch2N4`
+- `start_pg`
+- `rx`
+
+#### Output
+
+- `[15:0] led2N4`
+- `tx`
+- `[7:0] segment_led` // the content to be displayed
+- `[7:0] seg_en` // which tube
+
+
 ### 1. Controller
 
 #### Input

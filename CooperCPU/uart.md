@@ -1,39 +1,71 @@
 Part of the code concerning `UART` in `TOP` module:
 
 ```verilog
-///////////// UART Programmer Pinouts ///////////// 
-    wire upg_clk, upg_clk_o;
-    wire upg_wen_o; //Uart write out enable
-    wire upg_done_o; //Uart iFpgaUartFromPc data have done
-    //data to which memory unit of program_rom/dmemory32
-    wire [14:0] upg_adr_o;
-    //data to program_rom or dmemory32
-    wire [31:0] upg_dat_o;
-    wire spg_bufg;
-    BUFG U1(.I(iStartReceiveCoe), .O(spg_bufg)); // de-twitter
-    // Generate UART Programmer reset signal
-    reg upg_rst;
-    always @ (posedge iFpgaClk) begin
-    if (spg_bufg) upg_rst = 0;
-    if (iFpgaRst) upg_rst = 1;
-    end
-    //used for other modules which don't relate to UART
-    wire rst;
-    assign rst = iFpgaRst | !upg_rst;
+// UART Programmer Pinouts 
+wire upg_clk, upg_clk_o; 
+wire upg_wen_o; //Uart write out enable 
+wire upg_done_o; //Uart rx data have done 
+//data to which memory unit of program_rom/dmemory32 
+wire [14:0] upg_adr_o; //data to program_rom or dmemory32 
+wire [31:0] upg_dat_o;
+wire spg_bufg; 
+//BUFG1 U1(.clk(fpga_clk), .nrst(fpga_rst), .key_in(start_pg), .key_out(spg_bufg)); // de-twitter 
+BUFG U1(.I(start_pg), .O(spg_bufg)); // de-twitter
+// Generate UART Programmer reset signal 
+reg upg_rst; 
+always @ (posedge fpga_clk) 
+begin 
+    if (spg_bufg) 
+        upg_rst = 0; 
+    if (fpga_rst) 
+        upg_rst = 1; 
+end
+wire rst = fpga_rst | !upg_rst;
 
-    /* if kickOff is 1 means CPU work on normal mode, otherwise CPU work on Uart communication mode */
-    wire kickOff = upg_rst | (~upg_rst & upg_done_o );
+wire upg_clk1;
+cpuclk clk(.clk_in1(fpga_clk), .clk_out1(upg_clk1),.clk_out2(upg_clk_o));
+//////////////////////////////////23                10
 
-    uart_bmpg_0 uart_instance(
-        .upg_clk_i(upg_clk),
-        .upg_rst_i(upg_rst),
-        .upg_rx_i(iFpgaUartFromPc),
-        .upg_clk_o(upg_clk_o),
-        .upg_wen_o(upg_wen_o),
-        .upg_adr_o(upg_adr_o),
-        .upg_dat_o(upg_dat_o),
-        .upg_done_o(upg_done_o)
-    );
+reg[31:0] low_clk;
+always @(posedge upg_clk1)low_clk=low_clk+1;
+assign upg_clk=low_clk[2];//upg_clk1;//
+//1010 1010 1010 1010
+
+wire clkout=low_clk[12];
+wire [31:0] data;
+//frequency_divider #(100_000)divider2(fpga_clk,fpga_rst,clkout);
+segment seg(.clk(clkout),.rst(fpga_rst),.in(data),.segment_led(segment_led),.seg_en(seg_en));
+//uart的wires
+wire upg_clk_w; //链接dmemory32
+wire upg_wen_w; //链接dmemory32
+wire[14:0] upg_adr_w; //链接dmemory32
+wire[31:0] upg_dat_w; //链接dmemory32 and decoder
+wire upg_done_w; //链接dmemory32
+
+uart_bmpg_0 uart(.upg_clk_i(upg_clk_o),.upg_rst_i(upg_rst),.upg_rx_i(rx),
+.upg_clk_o(upg_clk_w),.upg_wen_o(upg_wen_w),.upg_adr_o(upg_adr_w),
+.upg_dat_o(upg_dat_w),.upg_done_o(upg_done_w),.upg_tx_o(tx));
+
+wire cpu_clk=upg_clk;
+
+//dmeory32的wires
+wire ram_wen_w;//链接controller
+wire[31:0] ram_adr_w;//链接ALU的alu_result
+wire[31:0] ram_dat_i_w;//链接decoder的read_data_2
+wire[31:0] ram_dat_o_w;//
+dmemory32 mem(.ram_clk_i(cpu_clk),.ram_wen_i(ram_wen_w),.ram_adr_i(ram_adr_w),
+.ram_dat_i(ram_dat_i_w),.ram_dat_o(ram_dat_o_w),.upg_rst_i(upg_rst),.upg_clk_i(upg_clk_w),
+.upg_wen_i(upg_wen_w&upg_adr_w[14]),.upg_adr_i(upg_adr_w),.upg_dat_i(upg_dat_w),.upg_done_i(upg_done_w));
+
+
+//programrom的wires
+wire[31:0] rom_adr_w;//
+wire[31:0] Instruction_o_w;//
+wire[31:0] pco_w;
+
+programrom pro(.rom_clk_i(cpu_clk),.rom_adr_i(pco_w),.Instruction_o(Instruction_o_w),
+.upg_rst_i(upg_rst),.upg_clk_i(upg_clk_w),.upg_wen_i(upg_wen_w&!upg_adr_w[14]),
+.upg_adr_i(upg_adr_w),.upg_dat_i(upg_dat_w),.upg_done_i(upg_done_w));
 
 ```
 
