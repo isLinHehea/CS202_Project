@@ -219,6 +219,11 @@
 我们应该先完成所有部分再考虑如何加入`UART`。过于抽象！
 原理大概是例化很多uart模块，通过一个kickoff 信号控制。
 
+#### 5.8 update
+
+Refer to **`lab13`** to deal with `UART` module. That should explain much.
+
+
 ### Reference Respositories
 
 Certseeds, 2catycm (UART modules)
