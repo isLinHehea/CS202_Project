@@ -66,10 +66,17 @@
 
 #### Input
 
--`[31:0] address` // from MemOrIO, rooted from Executer.
--`[31:0] write_data`    // from IF, Read_data_2
--`Memwrite`  // from controller, 1 means write, 0 means read
--`clk` // system clock
+- `ram_clk_i`  // from CPU top
+- `ram_wen_i`  // from controller,1 means write, 0 means read
+- `[13:0] ram_adr_i` // from alu_result of ALU
+- `[31:0] ram_dat_i` // from read_data_2 of decoder
+- // UART Programmer Pinouts
+- `upg_rst_i`  // UPG reset (Active High)
+- `upg_clk_i`  // UPG ram_clk_i (10MHz)
+- `upg_wen_i`  // UPG write enable
+- `[13:0] upg_adr_i` // UPG write address
+- `[31:0] upg_dat_i` // UPG write data
+- `upg_done_i` // 1 if programming is finished
 
 #### Output
 
@@ -89,14 +96,33 @@
 - `Jmp` // 1-j
 - `Jal` // 1-jal
 - `Jr` // 1-jr
+- `[31:0] iInstruction` // from programROM
 
 #### Output
 
-- `[31:0] instruction`// instruction read out
+- `[31:0] oInstruction`// instruction read out
 - `[31:0] branch_base_addr`   // actually **pc+4**, to ALU, for branch use
 - `[31:0] link_addr` // actually **pc+4**, for "jal" use
 - `[31:0] pc`
     > need a next_pc inside to update pc using FSM
+
+### programROM
+
+- // Program ROM Pinouts
+- `rom_clk_i`  // ROM clock
+- `[13:0] rom_adr_i` // From IFetch
+- // UART Programmer Pinouts
+- `upg_rst_i`  // UPG reset (Active High)
+- `upg_clk_i`  // UPG clock (10MHz)
+- `upg_wen_i`  // UPG write enable
+- `[13:0] upg_adr_i` // UPG write address
+- `[31:0] upg_dat_i` // UPG write data
+- `upg_done_i` // 1 if program finished
+
+#### Output
+
+`[31:0] Instruction_o` // To IFetch 
+
 
 ### 5. Decoder
 
