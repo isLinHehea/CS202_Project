@@ -19,7 +19,7 @@
 - `fpga_rst` // active high
 - `fpga_clk`
 - `[15:0] switch2N4`
-- `start_pg`
+- `start_pg` // StartReceiveCoe (active high)
 - `rx`
 
 #### Output
