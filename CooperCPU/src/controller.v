@@ -1,24 +1,7 @@
 
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2021/05/22 10:24:07
-// Design Name: 
-// Module Name: segment
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+
 
 
 module controller(
@@ -47,7 +30,7 @@ module controller(
 
 );
     wire lw, sw, R_format;
-    
+
     assign lw = (opcode ==6'b100011)? 1'b1:1'b0;
     assign sw = (opcode ==6'b101011)? 1'b1:1'b0;
     assign regWrite = (R_format || lw || jal || I_format) && ~(jr); // Write memory or write IO
