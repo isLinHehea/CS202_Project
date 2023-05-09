@@ -37,6 +37,7 @@ module MemOrIO(
     assign TubeCtrl = ioWrite && ; // to be determined
 
     // question: how to decide when to use led, when to use segment tube?
+    // use a signal to differentiate bit-wise operation(led) and arithmetic operation(segment tube).
 
     always @* begin
         if((memWrite==1)||(ioWrite==1))
