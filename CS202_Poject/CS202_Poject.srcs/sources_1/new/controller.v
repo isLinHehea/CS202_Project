@@ -2,8 +2,6 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 
-
-
 module controller(input [5:0] opcode,           // from iFetch, instruction[31..26]
                   input [5:0] func_opcode,      // from iFetch, r-type instructions[5..0]
                   input [21:0] alu_result_high, // from Executer, alu_result[31..10]

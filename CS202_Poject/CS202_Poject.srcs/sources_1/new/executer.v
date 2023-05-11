@@ -34,7 +34,4 @@ module Executs32 (input[31:0] Read_data_1,      //the source of Ainput
                   output Zero,                  // 1 means the ALU_result is 0
                   output reg [31:0] ALU_Result, // the ALU calculation result
                   output [31:0] Addr_Result);   // the calculated instruction address
-    
-    
-    
 endmodule
