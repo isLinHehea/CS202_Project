@@ -2,26 +2,88 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Thu May 11 00:06:20 2023
-# Process ID: 3580
+# Start of session at: Thu May 11 20:41:56 2023
+# Process ID: 19004
 # Current directory: D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10648 D:\LearningMaterials\CS202\Project\CS202_Project\CS202_Poject\CS202_Poject.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16216 D:\LearningMaterials\CS202\Project\CS202_Project\CS202_Poject\CS202_Poject.xpr
 # Log file: D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/vivado.log
 # Journal file: D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_loop.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_manager.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_recv.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_send.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/UartDriver.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/programRom.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/clock.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/ioRead.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/MemOrIO.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/ledDriver.v'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/switchDriver.v'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
 update_compile_order -fileset sources_1
-add_files -norecurse {D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/decoder.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/executer.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/programRom.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_loop.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/clock.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/dmemory.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_manager.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_recv.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_send.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/IFetch.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/UartDriver.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/ioRead.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/MemOrIO.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/ledDriver.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/controller.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/switchDriver.v}
 update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/MemOrIO.v] -no_script -reset -force -quiet
+remove_files  D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/MemOrIO.v
+export_ip_user_files -of_objects  [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/clock.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/UartDriver.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/ioRead.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/ledDriver.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/programRom.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_loop.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/switchDriver.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_manager.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_send.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_recv.v] -no_script -reset -force -quiet
+remove_files  {D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/clock.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/UartDriver.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/ioRead.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/ledDriver.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/programRom.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_loop.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/switchDriver.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_manager.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_send.v D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/uart_recv.v}
+add_files -norecurse D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/CPU.v
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/demo.v] -no_script -reset -force -quiet
-remove_files  D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/demo.v
-file delete -force D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/new/demo.v
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 5.4 -module_name cpu_clk -dir d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {cpu_clk} CONFIG.PRIMITIVE {PLL} CONFIG.CLKOUT2_USED {true} CONFIG.PRIMARY_PORT {fpga_clk} CONFIG.CLK_OUT1_PORT {cpu_clk} CONFIG.CLK_OUT2_PORT {uart_clk} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {23.000} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {10.000} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {46} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {40} CONFIG.MMCM_CLKOUT1_DIVIDE {92} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT1_JITTER {342.117} CONFIG.CLKOUT1_PHASE_ERROR {303.235} CONFIG.CLKOUT2_JITTER {391.228} CONFIG.CLKOUT2_PHASE_ERROR {303.235}] [get_ips cpu_clk]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'cpu_clk' to 'cpu_clk' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/ip/cpu_clk/cpu_clk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpu_clk'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/ip/cpu_clk/cpu_clk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpu_clk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpu_clk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpu_clk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpu_clk'...
+catch { config_ip_cache -export [get_ips -all cpu_clk] }
+export_ip_user_files -of_objects [get_files d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/ip/cpu_clk/cpu_clk.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/ip/cpu_clk/cpu_clk.xci]
+launch_runs -jobs 4 cpu_clk_synth_1
+[Thu May 11 20:52:26 2023] Launched cpu_clk_synth_1...
+Run output will be captured here: D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.runs/cpu_clk_synth_1/runme.log
+export_simulation -of_objects [get_files d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/ip/cpu_clk/cpu_clk.xci] -directory D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.ip_user_files/sim_scripts -ip_user_files_dir D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.ip_user_files -ipstatic_source_dir D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.cache/compile_simlib/modelsim} {questa=D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.cache/compile_simlib/questa} {riviera=D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.cache/compile_simlib/riviera} {activehdl=D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  D:/BingDownload [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/BingDownload'.
+create_ip -name uart_bmpg -vendor SEU_CSE_507 -library user -version 1.3 -module_name uart_bmpg_0 -dir d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/ip
+generate_target {instantiation_template} [get_files d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'uart_bmpg_0'...
+generate_target all [get_files  d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'uart_bmpg_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'uart_bmpg_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'uart_bmpg_0'...
+catch { config_ip_cache -export [get_ips -all uart_bmpg_0] }
+export_ip_user_files -of_objects [get_files d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci]
+launch_runs -jobs 4 uart_bmpg_0_synth_1
+[Thu May 11 21:14:59 2023] Launched uart_bmpg_0_synth_1...
+Run output will be captured here: D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.runs/uart_bmpg_0_synth_1/runme.log
+export_simulation -of_objects [get_files d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci] -directory D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.ip_user_files/sim_scripts -ip_user_files_dir D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.ip_user_files -ipstatic_source_dir D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.cache/compile_simlib/modelsim} {questa=D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.cache/compile_simlib/questa} {riviera=D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.cache/compile_simlib/riviera} {activehdl=D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+file mkdir D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/constrs_1
+file mkdir D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/constrs_1/new
+close [ open D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/constrs_1/new/cpu_constrs.xdc w ]
+add_files -fileset constrs_1 D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Poject/CS202_Poject.srcs/constrs_1/new/cpu_constrs.xdc
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu May 11 01:12:48 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu May 11 22:11:44 2023...
