@@ -20,7 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Decoder(input clk, rst,
+module Decoder(input clk,
+               rst,
                input[31:0] Instruction_i, // from iFetch
                input[31:0] read_data,     // from DATA RAM or I/O
                input[31:0] ALU_result,    // from Executer
@@ -42,7 +43,7 @@ module Decoder(input clk, rst,
     wire[4:0] write_reg = (6'b000011 == opcode & Jal)?5'b11111:(RegDst)?rd:rt;
     
     integer i;
-    always @(posedge clk,rst) begin
+    always @(posedge clk, posedge rst) begin
         if (rst) begin
             for(i = 0; i<= 31; i = i+1)
                 register[i] <= 32'b0;

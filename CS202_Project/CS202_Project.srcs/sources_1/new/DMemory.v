@@ -36,7 +36,7 @@ module DMemory(input ram_clk_i,         // from CPU top
     /* CPU work on normal mode when kickOff is 1. CPU work on Uart communicate mode when kickOff is 0.*/
     wire kickOff = upg_rst_i | (~upg_rst_i & upg_done_i);
     
-    RAM ram (
+    RAM RAM_inst (
     .clka (kickOff ? ram_clk : upg_clk_i),
     .wea (kickOff ? ram_wen_i : upg_wen_i),
     .addra (kickOff ? ram_adr_i/4 : upg_adr_i),

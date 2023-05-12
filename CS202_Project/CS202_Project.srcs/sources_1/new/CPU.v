@@ -137,9 +137,9 @@ module CPU(input fpga_rst,        //Active High
     );
     
     // Controller
-    Controller controller(
+    Controller Controller_inst (
     .Opcode(Instruction_o[31:26]),
-    .Function_opcode(Instruction_o[5:0]),
+    .Func_opcode(Instruction_o[5:0]),
     .ALU_result_high(ALU_result[31:10]),
     .Jr(Jr),
     .Jmp(Jmp),
@@ -200,7 +200,7 @@ module CPU(input fpga_rst,        //Active High
     .read_data_2(read_data_2),
     .Sign_extend(Sign_extend),
     .Func_opcode(Instruction_o[5:0]),
-    .opcode(Instruction_o[31:26]),
+    .Opcode(Instruction_o[31:26]),
     .Shamt(Instruction_o[10:6]),
     .branch_base_addr(branch_base_addr),
     .ALUOp(ALUOp),

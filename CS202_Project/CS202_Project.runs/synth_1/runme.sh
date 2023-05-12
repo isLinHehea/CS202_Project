@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/programROM_synth_1'
+HD_PWD='D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log programROM.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source programROM.tcl
+EAStep vivado -log CPU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPU.tcl

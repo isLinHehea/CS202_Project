@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Executs(input[31:0] read_data_1,      //the source of inputA 
+module Executer(input[31:0] read_data_1,      //the source of inputA 
                input[31:0] read_data_2,      //one of the sources of inputB
                input[31:0] Sign_extend,      // one of the sources of inputB (maybe from register or an immediate)
                input[5:0] Func_opcode,       //instructions[5:0]
