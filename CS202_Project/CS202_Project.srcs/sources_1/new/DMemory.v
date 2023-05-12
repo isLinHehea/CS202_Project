@@ -1,22 +1,22 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Company:
+// Engineer:
+//
 // Create Date: 2023/05/12 11:02:42
-// Design Name: 
+// Design Name:
 // Module Name: DMemory
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
+// Project Name:
+// Target Devices:
+// Tool Versions:
+// Description:
+//
+// Dependencies:
+//
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -32,7 +32,8 @@ module DMemory(input ram_clk_i,         // from CPU top
                input [31:0] upg_dat_i,  // UPG write data
                input upg_done_i);       // 1 if programming is finished
     
-    wire ram_clk = !ram_clk_i; // CPU work on normal mode when kickOff is 1. CPU work on Uart communicate mode when kickOff is 0.
+    wire ram_clk = !ram_clk_i;
+    /* CPU work on normal mode when kickOff is 1. CPU work on Uart communicate mode when kickOff is 0.*/
     wire kickOff = upg_rst_i | (~upg_rst_i & upg_done_i);
     
     RAM ram (

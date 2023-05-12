@@ -29,10 +29,12 @@ module IFetch(input clk, rst,
               input Jmp,                      // 1 means the instruction is j
               input Jal,                      // 1 means the instruction is jal
               input Jr,                       // 1 means the instruction is jr
-              input [31:0] Instruction_i,      // the instruction fetched from instruction memory
-              output [31:0] Instruction_o,     // the instruction fetched from instruction memory
+              input [31:0] Instruction_i,     // the instruction fetched from instruction memory
+              output [31:0] Instruction_o,    // the instruction fetched from instruction memory
               output [31:0] branch_base_addr, // actually pc+4, to ALU, for branch use
-              output reg [31:0] link_addr);   // actually pc+4, to Decoder, for jal use
+              output reg [31:0] link_addr,     // actually pc+4, to Decoder, for jal use
+              output fetch_addr
+              );   
     
     reg[31:0] PC, Next_PC;
     
@@ -60,7 +62,7 @@ module IFetch(input clk, rst,
             PC <= Next_PC;
         end
     end
-            
+    assign fetch_addr = PC[15:2];
     assign branch_base_addr = PC + 4;
     assign Instruction_o = Instruction_i;
 endmodule

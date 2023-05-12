@@ -23,10 +23,10 @@
 module Executs(input[31:0] read_data_1,      //the source of inputA 
                input[31:0] read_data_2,      //one of the sources of inputB
                input[31:0] Sign_extend,      // one of the sources of inputB (maybe from register or an immediate)
-               input[5:0] Function_opcode,       //instructions[5:0]
+               input[5:0] Func_opcode,       //instructions[5:0]
                input[5:0] Opcode,            //instruction[31:26]
                input[4:0] Shamt,             // instruction[10:6], the amount of shift bits
-               input[31:0] PC_plus_4,        // pc+4
+               input[31:0] branch_base_addr,        // pc+4
                input[1:0] ALUOp,             //{ (R_format || I_format), (Branch || nBranch) }
                input ALUSrc,                 // 1 means the second operand is immediate number(except beq and bne)
                input I_format,               // 1 means I-Type instruction except beq, bne, LW, SW
@@ -42,15 +42,14 @@ module Executs(input[31:0] read_data_1,      //the source of inputA
     wire[2:0] Sftm; 
     reg[31:0] ALU_output_mux; 
     reg[31:0] Shift_Result; 
-    wire[32:0] Branch_Addr; 
 
     assign inputA  = read_data_1; 
     assign inputB = (ALUSrc == 0) ? read_data_2 : Sign_extend[31:0];
-    assign Exe_code = (I_format==0) ? Function_opcode : { 3'b000 , Opcode[2:0] };
+    assign Exe_code = (I_format==0) ? Func_opcode : { 3'b000 , Opcode[2:0] };
     assign ALU_ctl[0] = (Exe_code[0] | Exe_code[3]) & ALUOp[1]; 
     assign ALU_ctl[1] = ((!Exe_code[2]) | (!ALUOp[1])); 
     assign ALU_ctl[2] = (Exe_code[1] & ALUOp[1]) | ALUOp[0];
-    assign Sftm = Function_opcode[2:0];
+    assign Sftm = Func_opcode[2:0];
 
     always @ (ALU_ctl or inputA  or inputB)
     begin case (ALU_ctl)
@@ -92,6 +91,5 @@ module Executs(input[31:0] read_data_1,      //the source of inputA
     end
 
     assign Zero = (ALU_output_mux == 32'b0) ? 1'b1 : 1'b0;
-    assign Branch_Addr = PC_plus_4[31:2] + Sign_extend;
-    assign Addr_Result = Branch_Addr[31:0];
+    assign Addr_Result = branch_base_addr[31:2] + Sign_extend;
 endmodule
