@@ -14,8 +14,8 @@ module Controller(input [5:0] Opcode,           // from iFetch, instruction[31..
                   output RegWrite,              // 1 means needs to write register
                   output MemRead,               // 1 means reading from memory
                   output MemWrite,              // 1 means writing to memory
-                  output IoRead,                // 1 means I/O read
-                  output IoWrite,               // 1 means I/O write
+                  output IORead,                // 1 means I/O read
+                  output IOWrite,               // 1 means I/O write
                   output ALUSrc,                // 1 means the second operand is immediate number(except beq and bne)
                   output Sftmd,                 // 1 means shift
                   output I_format,              // 1 means I-type(except beq, bne, lw, sw)
@@ -27,9 +27,9 @@ assign sw           = (Opcode == 6'b101011)? 1'b1:1'b0;
 assign RegWrite     = (R_format || lw || Jal || I_format) && ~(Jr); // Write memory or write IO
 assign MemRead      = (lw == 1'b1 && (ALU_result_high[21:0] != 22'h3FFFFF))? 1'b1:1'b0; // Read memory
 assign MemWrite     = (sw == 1'b1 && (ALU_result_high[21:0] != 22'h3FFFFF))? 1'b1:1'b0; // Write memory
-assign IoRead       = (lw == 1'b1 && (ALU_result_high[21:0] == 22'h3FFFFF))? 1'b1:1'b0; // Read IO
-assign IoWrite      = (sw == 1'b1 && (ALU_result_high[21:0] == 22'h3FFFFF))? 1'b1:1'b0; // Write IO
-assign MemOrIOtoReg = IoRead || MemRead;
+assign IORead       = (lw == 1'b1 && (ALU_result_high[21:0] == 22'h3FFFFF))? 1'b1:1'b0; // Read IO
+assign IOWrite      = (sw == 1'b1 && (ALU_result_high[21:0] == 22'h3FFFFF))? 1'b1:1'b0; // Write IO
+assign MemOrIOtoReg = IORead || MemRead;
 
 assign Jal     = (Opcode == 6'b000011)? 1'b1:1'b0;
 assign Jr      = (Opcode == 6'b000000 && Function_opcode == 6'b001000)? 1'b1:1'b0;
