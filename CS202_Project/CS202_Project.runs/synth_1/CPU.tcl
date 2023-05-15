@@ -16,6 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -36,21 +37,23 @@ read_verilog -library xil_defaultlib {
   D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/Decoder.v
   D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/Executer.v
   D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/IFetch.v
+  D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/Light.v
   D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/MemOrIO.v
   D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/ProgramROM.v
+  D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/Switch.v
   D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/CPU.v
 }
-read_ip -quiet d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/programROM/programROM.xci
+read_ip -quiet D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/programROM/programROM.xci
 set_property used_in_implementation false [get_files -all d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/programROM/programROM_ooc.xdc]
 
-read_ip -quiet d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/cpu_clk/cpu_clk.xci
+read_ip -quiet D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/cpu_clk/cpu_clk.xci
 set_property used_in_implementation false [get_files -all d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/cpu_clk/cpu_clk_board.xdc]
 set_property used_in_implementation false [get_files -all d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/cpu_clk/cpu_clk.xdc]
 set_property used_in_implementation false [get_files -all d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/cpu_clk/cpu_clk_ooc.xdc]
 
-read_ip -quiet d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci
+read_ip -quiet D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci
 
-read_ip -quiet d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/RAM/RAM.xci
+read_ip -quiet D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/RAM/RAM.xci
 set_property used_in_implementation false [get_files -all d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/RAM/RAM_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -61,6 +64,9 @@ set_property used_in_implementation false [get_files -all d:/LearningMaterials/C
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/constrs_1/new/CPU.xdc
+set_property used_in_implementation false [get_files D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/constrs_1/new/CPU.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 

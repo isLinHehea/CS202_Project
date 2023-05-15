@@ -21,8 +21,8 @@
 
 
 module Decoder(input clk, rst,
-               input[31:0] Instruction_i, // from iFetch
-               input[31:0] read_data,     // from DATA RAM or I/O
+               input[31:0] Instruction, // from iFetch
+               input[31:0] mem_data,     // from DATA RAM or I/O
                input[31:0] ALU_result,    // from Executer
                input Jal,
                input RegWrite,
@@ -33,11 +33,11 @@ module Decoder(input clk, rst,
                output[31:0] read_data_1,
                output[31:0] read_data_2);
     
-    wire[5:0] opcode     = Instruction_i[31:26];
-    wire[4:0] rs         = Instruction_i[25:21];
-    wire[4:0] rt         = Instruction_i[20:16];
-    wire[4:0] rd         = Instruction_i[15:11];
-    wire[15:0] immediate = Instruction_i[15:0];
+    wire[5:0] opcode     = Instruction[31:26];
+    wire[4:0] rs         = Instruction[25:21];
+    wire[4:0] rt         = Instruction[20:16];
+    wire[4:0] rd         = Instruction[15:11];
+    wire[15:0] immediate = Instruction[15:0];
     reg[31:0] register[0:31];
     wire[4:0] write_reg = (6'b000011 == opcode & Jal)?5'b11111:(RegDst)?rd:rt;
     
@@ -49,7 +49,7 @@ module Decoder(input clk, rst,
         end
         else begin
             if ((RegWrite || Jal) && write_reg != 0) begin
-                register[write_reg] <= ((6'b000011 == opcode && 1'b1 == Jal)?link_addr:(MemtoReg?read_data:ALU_result));
+                register[write_reg] <= ((6'b000011 == opcode && 1'b1 == Jal)?link_addr:(MemtoReg?mem_data:ALU_result));
             end
         end
     end

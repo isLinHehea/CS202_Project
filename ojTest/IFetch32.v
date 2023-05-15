@@ -27,9 +27,18 @@ module Ifetc32 (Instruction,
     
     reg[31:0] PC, Next_PC;
     
+
+    prgrom prgrom(
+    .clka(clock),
+    .addra(PC[15:2]),
+    .douta(Instruction)
+    );
+
     always @* begin
-        if (((Branch == 1) && (Zero == 1)) || ((nBranch == 1) && (Zero == 0))) // beq, bne
+        if ((Branch == 1'b1 && Zero == 1'b1)||(nBranch == 1'b1 && Zero == 1'b0)) // beq, bne
+        begin
             Next_PC = Addr_result;
+        end
         else if (Jr == 1)
             Next_PC = Read_data_1;
         else
@@ -39,19 +48,17 @@ module Ifetc32 (Instruction,
     
     always @(negedge clock or posedge reset) begin
         if (reset == 1) begin
-            PC        <= 32'h0000_0000;
-            link_addr <= 2'h0000_0000;
+            PC <= 32'h0000_0000;
         end
         else begin
             if (Jal == 1)
-                link_addr <= PC+4;
-                if ((Jmp == 1) || (Jal == 1))
-                    Next_PC = {PC[31:28], Instruction[25:0], 2'b00};
-                else
-                    PC <= Next_PC;
-                end
-                end
-                assign fetch_addr       = PC[15:2];
-                assign branch_base_addr = PC + 4;
-            
+                link_addr <= PC + 4;
+            if ((Jmp == 1) || (Jal == 1))
+                PC = {PC[31:28], Instruction[25:0], 2'b00};
+            else
+                PC <= Next_PC;
+            end
+        end
+
+    assign branch_base_addr = PC + 4;
 endmodule
