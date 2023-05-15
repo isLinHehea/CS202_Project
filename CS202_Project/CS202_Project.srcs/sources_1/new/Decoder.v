@@ -20,8 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Decoder(input clk,
-               rst,
+module Decoder(input clk, rst,
                input[31:0] Instruction_i, // from iFetch
                input[31:0] read_data,     // from DATA RAM or I/O
                input[31:0] ALU_result,    // from Executer
