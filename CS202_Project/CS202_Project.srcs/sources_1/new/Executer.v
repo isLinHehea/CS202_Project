@@ -45,7 +45,7 @@ module Executer(input[31:0] read_data_1,      //the source of inputA
 
     assign inputA  = read_data_1; 
     assign inputB = (ALUSrc == 0) ? read_data_2 : Sign_extend[31:0];
-    assign Exe_code = (I_format==0) ? Func_opcode : { 3'b000 , Opcode[2:0] };
+    assign Exe_code = (I_format==0) ? Func_opcode : { 3'b000 , Opcode[2:0]};
     assign ALU_ctl[0] = (Exe_code[0] | Exe_code[3]) & ALUOp[1]; 
     assign ALU_ctl[1] = ((!Exe_code[2]) | (!ALUOp[1])); 
     assign ALU_ctl[2] = (Exe_code[1] & ALUOp[1]) | ALUOp[0];
@@ -80,16 +80,15 @@ module Executer(input[31:0] read_data_1,      //the source of inputA
     end
 
     always @* begin 
-    //set type operation (slt, slti, sltu, sltiu) 
-    if(((ALU_ctl==3'b111) && (Exe_code[3]==1))||((ALU_ctl[2:1]==2'b11) && (I_format==1))) ALU_result = ALU_output_mux[31]==1 ? 1:0; 
-    //lui operation 
-    else if((ALU_ctl==3'b101) && (I_format==1)) ALU_result[31:0]={inputB[15:0],{16{1'b0}}}; 
-    //shift operation 
-    else if(Sftmd==1) ALU_result = Shift_Result ; 
-    //other types of operation in ALU (arithmatic or logic calculation) 
-    else ALU_result = ALU_output_mux[31:0]; 
+    if(((ALU_ctl==3'b111) && (Exe_code[3]==1))||((ALU_ctl[2:1]==2'b11) && (I_format==1)))
+        ALU_result = ALU_output_mux[31]==1 ? 1:0; 
+    else if((ALU_ctl==3'b101) && (I_format==1))
+        ALU_result[31:0]={inputB[15:0],{16{1'b0}}}; 
+    else if(Sftmd==1)
+        ALU_result = Shift_Result;
+    else ALU_result = ALU_output_mux;
     end
 
     assign Zero = (ALU_output_mux == 32'b0) ? 1'b1 : 1'b0;
-    assign Addr_Result = branch_base_addr[31:2] + Sign_extend;
+    assign Addr_Result = branch_base_addr[31:2] + (Sign_extend << 2);
 endmodule

@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CPU(input fpga_rst,        //Active High
+module CPU(input fpga_rst,        //Active High 正常模式
            input fpga_clk,
-           input start_pg,        //Active High
-           input [15:0]switch,
-           output [15:0]led,
+           input start_pg,        //Active High 通信模式
+           input [15:0] switch,
+           output [15:0] led,
            input rx,
            output tx,
            output [7:0] seg_sign,
@@ -212,4 +212,5 @@ module CPU(input fpga_rst,        //Active High
     .ALU_result(ALU_result),
     .Addr_result(Addr_result)
     );
+    
 endmodule
