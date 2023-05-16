@@ -20,22 +20,24 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CPU(input fpga_rst,        //Active High
-           input fpga_clk,
-           input start_pg,        //Active High
-           input [15:0]switch,
-           output [15:0]led,
+module CPU(input fpga_clk,        //100mHz
+           input fpga_rst,        //Active High 正常模式
+           input start_pg,        //Active High 通信模式
            input rx,
            output tx,
-           output [7:0] seg_sign,
-           output [7:0] seg_en);
+           input [15:0] switch,
+           output [15:0] led,
+           output [7:0] seg_en,
+           output [7:0] seg_out0,
+           output [7:0] seg_out1
+           );
     
     //  Reset
     wire cpu_clk, upg_clk_i, upg_clk_o;
-    wire upg_wen_o;
-    wire upg_done_o;
-    wire [14:0] upg_adr_o;
-    wire [31:0] upg_dat_o;
+    wire upg_wen_o;  //Uart write out e
+    wire upg_done_o;  //Uart rx data have done
+    wire [14:0] upg_adr_o;  //data to which memory unit of program_rom/dmemory32
+    wire [31:0] upg_dat_o;  //data to program_rom or dmemory32
     wire spg_bufg;
     reg upg_rst;
     wire rst;
@@ -63,29 +65,28 @@ module CPU(input fpga_rst,        //Active High
     .upg_wen_o(upg_wen_o),
     .upg_adr_o(upg_adr_o),
     .upg_dat_o(upg_dat_o),
-    .upg_done_o(upg_done_o)
+    .upg_done_o(upg_done_o),
+    .upg_tx_o(tx)
     );
     
     wire RegDst, Branch, nBranch, RegWrite, ALUSrc, MemWrite, MemorIOtoReg;
-    wire[1:0] ALUOp;
+    wire [1:0] ALUOp;
     wire Jmp, Jal, Jr, Zero, MemRead, IORead, IOWrite, I_format, Sftmd;
-    wire LEDCtrl, SwitchCtrl, TubeCtrl, PianoCtrl, UartCtrl;
-    wire [31:0] read_data;
+    wire LEDCtrl, SwitchCtrl, TubeCtrl, UartCtrl;
+    wire [31:0] mem_data;
     wire [31:0] read_data_1;
     wire [31:0] read_data_2;
-    wire [31:0] Instruction_i;
-    wire [31:0] Instruction_o;
+    wire [31:0] Instruction;
     wire [31:0] link_addr;
     wire [31:0] branch_base_addr;
     wire [31:0] Addr_result;
     wire [31:0] ALU_result;
-    wire[31:0] Sign_extend;
-    wire [13:0] rom_adr_o;
+    wire [31:0] Sign_extend;
+    wire [13:0] fetch_addr;
     wire [31:0] addr_out;
-    wire[31:0] write_data;
+    wire [31:0] write_data;
     wire [31:0] ram_dat_o;
     wire [15:0] io_rdata;
-    
     
     //  Instruction Fetch
     IFetch IFetch_inst(
@@ -99,18 +100,17 @@ module CPU(input fpga_rst,        //Active High
     .Jmp(Jmp),
     .Jal(Jal),
     .Jr(Jr),
-    .Instruction_i(Instruction_i),
-    .Instruction_o(Instruction_o),
+    .Instruction(Instruction),
     .branch_base_addr(branch_base_addr),
     .link_addr(link_addr),
-    .fetch_addr(rom_adr_o)
+    .fetch_addr(fetch_addr)
     );
     
     //  Instruction Memory
-    ProgramROM ProgramROM_inst (
+    ProgramROM ProgramROM_inst(
     .rom_clk_i(cpu_clk),
-    .rom_adr_i(rom_adr_o),
-    .Instruction_o(Instruction_i),
+    .rom_adr_i(fetch_addr),
+    .Instruction_o(Instruction),
     .upg_rst_i(upg_rst),
     .upg_clk_i(upg_clk_o),
     .upg_wen_i(upg_wen_o & (!upg_adr_o[14])),
@@ -120,11 +120,11 @@ module CPU(input fpga_rst,        //Active High
     );
     
     //  Decoder
-    Decoder Decoder_inst (
+    Decoder Decoder_inst(
     .clk(cpu_clk),
     .rst(rst),
-    .Instruction_i(Instruction_o),
-    .read_data(read_data),
+    .Instruction(Instruction),
+    .mem_data(mem_data),
     .ALU_result(ALU_result),
     .Jal(Jal),
     .RegWrite(RegWrite),
@@ -138,8 +138,8 @@ module CPU(input fpga_rst,        //Active High
     
     // Controller
     Controller Controller_inst (
-    .Opcode(Instruction_o[31:26]),
-    .Func_opcode(Instruction_o[5:0]),
+    .Opcode(Instruction[31:26]),
+    .Func_opcode(Instruction[5:0]),
     .ALU_result_high(ALU_result[31:10]),
     .Jr(Jr),
     .Jmp(Jmp),
@@ -178,19 +178,18 @@ module CPU(input fpga_rst,        //Active High
     MemOrIO  MemOrIO_inst(
     .mRead(MemRead),
     .mWrite(MemWrite),
-    .ioRead(IORead),
-    .ioWrite(IOWrite),
+    .IORead(IORead),
+    .IOWrite(IOWrite),
     .addr_in(ALU_result),
     .addr_out(addr_out),
     .m_rdata(ram_dat_o),
     .io_rdata(io_rdata),
-    .r_wdata(read_data),
+    .r_wdata(mem_data),
     .r_rdata(read_data_2),
     .write_data(write_data),
     .LEDCtrl(LEDCtrl),
     .SwitchCtrl(SwitchCtrl),
     .TubeCtrl(TubeCtrl),
-    .PianoCtrl(PianoCtrl),
     .UartCtrl(UartCtrl)
     );
     
@@ -199,9 +198,9 @@ module CPU(input fpga_rst,        //Active High
     .read_data_1(read_data_1),
     .read_data_2(read_data_2),
     .Sign_extend(Sign_extend),
-    .Func_opcode(Instruction_o[5:0]),
-    .Opcode(Instruction_o[31:26]),
-    .Shamt(Instruction_o[10:6]),
+    .Func_opcode(Instruction[5:0]),
+    .Opcode(Instruction[31:26]),
+    .Shamt(Instruction[10:6]),
     .branch_base_addr(branch_base_addr),
     .ALUOp(ALUOp),
     .ALUSrc(ALUSrc),
@@ -212,4 +211,26 @@ module CPU(input fpga_rst,        //Active High
     .ALU_result(ALU_result),
     .Addr_result(Addr_result)
     );
+
+    Switch Switch_inst(
+    .clk(cpu_clk),
+    .rst(rst),
+    .Switch(switch),
+    .SwitchRead(IORead),
+    .SwitchCtrl(SwitchCtrl),
+    .SwitchAddr(ALU_result[1:0]),
+    .SwitchRdata(io_rdata)
+    );
+
+    LED LED_inst(
+    .clk(cpu_clk),
+    .rst(rst),
+    .LEDWrite(led),
+    .LEDCtrl(LEDCtrl),
+    .LEDAddr(ALU_result[1:0]),
+    .LEDWdata(write_data),
+    .LED(LED)
+    );
+
+
 endmodule

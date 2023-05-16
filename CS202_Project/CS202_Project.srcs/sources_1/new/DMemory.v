@@ -25,6 +25,8 @@ module DMemory(input ram_clk_i,         // from CPU top
                input [31:0] ram_adr_i,  // from alu_result of ALU
                input [31:0] ram_dat_i,  // from read_data_2 of Decoder
                output [31:0] ram_dat_o, // the data read from data-ram
+
+               // UART Programmer Pinouts
                input upg_rst_i,         // UPG reset (Active High)
                input upg_clk_i,         // UPG ram_clk_i (10MHz)
                input upg_wen_i,         // UPG write enable
@@ -41,5 +43,6 @@ module DMemory(input ram_clk_i,         // from CPU top
     .wea (kickOff ? ram_wen_i : upg_wen_i),
     .addra (kickOff ? ram_adr_i/4 : upg_adr_i),
     .dina (kickOff ? ram_dat_i : upg_dat_i),
-    .douta (ram_dat_o));
+    .douta (ram_dat_o)
+    );
 endmodule
