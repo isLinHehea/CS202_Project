@@ -1,3 +1,8 @@
+#0xFFFF_FFFC70 : input from 16 switch
+#0xFFFF_FFFC60 : output to 16 LED
+#0xFFFF_FFFC62 : output to 16 LED and blink
+
+
 .data
 
 .text
@@ -23,7 +28,7 @@ case0:
 	beq $t3 ,1 ,blink
 	li $t4,0
 	li $t5,0
-loop0:
+loop0:	
 	beq $t4,$t2,print0
 	addi $t4,$t4,1
 	add $t5,$t5,$t4

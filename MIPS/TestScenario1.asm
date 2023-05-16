@@ -1,3 +1,7 @@
+#0xFFFF_FFFC70 : input from 16 switch
+#0xFFFF_FFFC60 : output to 16 LED
+#0xFFFF_FFFC62 : output to 16 LED and blink
+
 .data
 
 .text
