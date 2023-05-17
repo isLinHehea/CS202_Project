@@ -33,13 +33,11 @@ module MemOrIO(input mRead,                 // read memory, from Controller
                output reg[31:0] write_data, // data to memory or I/O£¨m_wdata, io_wdata£©
                output LEDCtrl,              // LED Chip Select
                output SwitchCtrl,           // Switch Chip Select
-               output TubeCtrl,
-               output UartCtrl);
+               output TubeCtrl);
     
     assign addr_out   = addr_in;
     assign r_wdata    = (mRead == 1)? m_rdata:{{16{io_rdata[15]}},io_rdata};
     assign SwitchCtrl = (IORead == 1'b1 && addr_in[7:4] == 4'h7) ? 1'b1 : 1'b0;
-    assign UartCtrl   = (IORead == 1'b1 && addr_in[7:4] == 4'h9) ? 1'b1 : 1'b0;
     assign LEDCtrl    = (IOWrite == 1'b1 && addr_in[7:4] == 4'b0110) ? 1'b1 : 1'b0;
     assign TubeCtrl   = (IOWrite == 1'b1 && addr_in[7:4] == 4'b1000) ? 1'b1 : 1'b0;
     

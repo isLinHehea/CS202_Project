@@ -69,10 +69,10 @@ module CPU(input fpga_clk,        //100mHz
     .upg_tx_o(tx)
     );
     
-    wire RegDst, Branch, nBranch, RegWrite, ALUSrc, MemWrite, MemOrIOtoReg;
+    wire RegDST, Branch, nBranch, RegWrite, ALUSrc, MemWrite, MemOrIOtoReg;
     wire [1:0] ALUOp;
     wire Jmp, Jal, Jr, Zero, MemRead, IORead, IOWrite, I_format, Sftmd;
-    wire LEDCtrl, SwitchCtrl, TubeCtrl, UartCtrl;
+    wire LEDCtrl, SwitchCtrl, TubeCtrl;
     wire [31:0] mem_data;
     wire [31:0] read_data_1;
     wire [31:0] read_data_2;
@@ -128,8 +128,8 @@ module CPU(input fpga_clk,        //100mHz
     .ALU_result(ALU_result),
     .Jal(Jal),
     .RegWrite(RegWrite),
-    .MemtoReg(MemOrIOtoReg),
-    .RegDst(RegDst),
+    .MemOrIOtoReg(MemOrIOtoReg),
+    .RegDST(RegDST),
     .link_addr(link_addr),
     .Sign_extend(Sign_extend),
     .read_data_1(read_data_1),
@@ -208,8 +208,7 @@ module CPU(input fpga_clk,        //100mHz
     .write_data(write_data),
     .LEDCtrl(LEDCtrl),
     .SwitchCtrl(SwitchCtrl),
-    .TubeCtrl(TubeCtrl),
-    .UartCtrl(UartCtrl)
+    .TubeCtrl(TubeCtrl)
     );
 
     Switch Switch_inst(
