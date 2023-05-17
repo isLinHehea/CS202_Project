@@ -3,7 +3,11 @@ Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 | Date         : Wed May 17 23:02:24 2023
+=======
+| Date         : Tue May 16 02:17:17 2023
+>>>>>>> parent of 84af03e (LJJ)
 =======
 | Date         : Tue May 16 02:17:17 2023
 >>>>>>> parent of 84af03e (LJJ)
@@ -138,7 +142,11 @@ Table of Contents
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      -1.362     -303.801                    524                 3181        0.049        0.000                      0                 3181        2.633        0.000                       0                  1362  
+=======
+     94.821        0.000                      0                  299        0.030        0.000                      0                  299        2.633        0.000                       0                   175  
+>>>>>>> parent of 84af03e (LJJ)
 =======
      94.821        0.000                      0                  299        0.030        0.000                      0                  299        2.633        0.000                       0                   175  
 >>>>>>> parent of 84af03e (LJJ)
@@ -174,8 +182,12 @@ cpu_clk_inst/inst/fpga_clk                                                      
   clkfbout_clk_wiz_0                                                                                                                                                          2.633        0.000                       0                     3  
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   cpu_clk_clk_wiz_0              -1.229      -87.624                    114                 2752        0.049        0.000                      0                 2752       21.239        0.000                       0                  1186  
   upg_clk_clk_wiz_0              95.024        0.000                      0                  301        0.122        0.000                      0                  301       49.020        0.000                       0                   172  
+=======
+  upg_clk_clk_wiz_0              94.821        0.000                      0                  299        0.030        0.000                      0                  299       49.020        0.000                       0                   171  
+>>>>>>> parent of 84af03e (LJJ)
 =======
   upg_clk_clk_wiz_0              94.821        0.000                      0                  299        0.030        0.000                      0                  299       49.020        0.000                       0                   171  
 >>>>>>> parent of 84af03e (LJJ)
@@ -268,10 +280,13 @@ From Clock:  cpu_clk_clk_wiz_0
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Setup :          114  Failing Endpoints,  Worst Slack       -1.229ns,  Total Violation      -87.624ns
 Hold  :            0  Failing Endpoints,  Worst Slack        0.049ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack       21.239ns,  Total Violation        0.000ns
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
 Setup :            0  Failing Endpoints,  Worst Slack       94.821ns,  Total Violation        0.000ns
@@ -283,6 +298,7 @@ PW    :            0  Failing Endpoints,  Worst Slack       49.020ns,  Total Vio
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 Slack (VIOLATED) :        -1.229ns  (required time - arrival time)
@@ -855,6 +871,8 @@ Slack (VIOLATED) :        -1.144ns  (required time - arrival time)
 =======
 =======
 >>>>>>> parent of 84af03e (LJJ)
+=======
+>>>>>>> parent of 84af03e (LJJ)
 Slack (MET) :             94.821ns  (required time - arrival time)
   Source:                 uart_inst/inst/upg_inst/msg_indx_reg[4]/C
                             (rising edge-triggered cell FDCE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
@@ -867,6 +885,7 @@ Slack (MET) :             94.821ns  (required time - arrival time)
   Logic Levels:           4  (LUT2=1 LUT3=1 LUT6=2)
   Clock Path Skew:        -0.107ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    -3.451ns = ( 96.549 - 100.000 ) 
+<<<<<<< HEAD
 <<<<<<< HEAD
     Source Clock Delay      (SCD):    -3.921ns
     Clock Pessimism Removal (CPR):    -0.577ns
@@ -1452,6 +1471,9 @@ Slack (MET) :             95.106ns  (required time - arrival time)
 =======
     Source Clock Delay      (SCD):    -3.921ns
 >>>>>>> parent of 84af03e (LJJ)
+=======
+    Source Clock Delay      (SCD):    -3.921ns
+>>>>>>> parent of 84af03e (LJJ)
     Clock Pessimism Removal (CPR):    -0.577ns
   Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -1481,8 +1503,13 @@ Slack (MET) :             95.106ns  (required time - arrival time)
                          net (fo=4, routed)           0.604    -0.041    uart_inst/inst/upg_inst/uart_wen5_out
     SLICE_X39Y50         LUT6 (Prop_lut6_I3_O)        0.124     0.083 r  uart_inst/inst/upg_inst/s_axi_wdata[4]_i_1/O
 <<<<<<< HEAD
+<<<<<<< HEAD
                          net (fo=7, routed)           0.379     0.462    uart_inst/inst/upg_inst/s_axi_wdata
     SLICE_X40Y49         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[4]/CE
+=======
+                         net (fo=7, routed)           0.700     0.783    uart_inst/inst/upg_inst/s_axi_wdata
+    SLICE_X42Y49         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[6]/CE
+>>>>>>> parent of 84af03e (LJJ)
 =======
                          net (fo=7, routed)           0.700     0.783    uart_inst/inst/upg_inst/s_axi_wdata
     SLICE_X42Y49         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[6]/CE
@@ -1498,6 +1525,7 @@ Slack (MET) :             95.106ns  (required time - arrival time)
                          net (fo=1, routed)           1.582    95.009    uart_inst/inst/upg_inst/upg_clk_i
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    95.101 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
                          net (fo=169, routed)         1.448    96.549    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
+<<<<<<< HEAD
 <<<<<<< HEAD
     SLICE_X40Y49         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[4]/C
                          clock pessimism             -0.577    95.972    
@@ -1524,18 +1552,36 @@ Slack (MET) :             95.207ns  (required time - arrival time)
   -------------------------------------------------------------------
                          slack                                 94.821    
 
+=======
+    SLICE_X42Y49         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[6]/C
+                         clock pessimism             -0.577    95.972    
+                         clock uncertainty           -0.199    95.773    
+    SLICE_X42Y49         FDRE (Setup_fdre_C_CE)      -0.169    95.604    uart_inst/inst/upg_inst/s_axi_wdata_reg[6]
+  -------------------------------------------------------------------
+                         required time                         95.604    
+                         arrival time                          -0.783    
+  -------------------------------------------------------------------
+                         slack                                 94.821    
+
+>>>>>>> parent of 84af03e (LJJ)
 Slack (MET) :             94.917ns  (required time - arrival time)
   Source:                 uart_inst/inst/upg_inst/msg_indx_reg[4]/C
                             (rising edge-triggered cell FDCE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
   Destination:            uart_inst/inst/upg_inst/s_axi_wdata_reg[5]/CE
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
                             (rising edge-triggered cell FDRE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
   Path Group:             upg_clk_clk_wiz_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            100.000ns  (upg_clk_clk_wiz_0 rise@100.000ns - upg_clk_clk_wiz_0 rise@0.000ns)
 <<<<<<< HEAD
+<<<<<<< HEAD
   Data Path Delay:        4.364ns  (logic 1.090ns (24.975%)  route 3.274ns (75.025%))
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
   Data Path Delay:        4.573ns  (logic 1.090ns (23.837%)  route 3.483ns (76.163%))
   Logic Levels:           4  (LUT2=1 LUT3=1 LUT6=2)
   Clock Path Skew:        -0.107ns (DCD - SCD + CPR)
@@ -1601,6 +1647,9 @@ Slack (MET) :             95.018ns  (required time - arrival time)
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            100.000ns  (upg_clk_clk_wiz_0 rise@100.000ns - upg_clk_clk_wiz_0 rise@0.000ns)
   Data Path Delay:        4.554ns  (logic 1.090ns (23.937%)  route 3.464ns (76.063%))
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
   Logic Levels:           4  (LUT2=1 LUT3=1 LUT6=2)
   Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
@@ -1635,8 +1684,13 @@ Slack (MET) :             95.018ns  (required time - arrival time)
                          net (fo=4, routed)           0.604    -0.041    uart_inst/inst/upg_inst/uart_wen5_out
     SLICE_X39Y50         LUT6 (Prop_lut6_I3_O)        0.124     0.083 r  uart_inst/inst/upg_inst/s_axi_wdata[4]_i_1/O
 <<<<<<< HEAD
+<<<<<<< HEAD
                          net (fo=7, routed)           0.360     0.443    uart_inst/inst/upg_inst/s_axi_wdata
     SLICE_X41Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[2]/CE
+=======
+                         net (fo=7, routed)           0.549     0.632    uart_inst/inst/upg_inst/s_axi_wdata
+    SLICE_X40Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[0]/CE
+>>>>>>> parent of 84af03e (LJJ)
 =======
                          net (fo=7, routed)           0.549     0.632    uart_inst/inst/upg_inst/s_axi_wdata
     SLICE_X40Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[0]/CE
@@ -1652,6 +1706,7 @@ Slack (MET) :             95.018ns  (required time - arrival time)
                          net (fo=1, routed)           1.582    95.009    uart_inst/inst/upg_inst/upg_clk_i
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    95.101 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
                          net (fo=169, routed)         1.438    96.538    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
+<<<<<<< HEAD
 <<<<<<< HEAD
     SLICE_X41Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[2]/C
                          clock pessimism             -0.485    96.054    
@@ -1683,12 +1738,32 @@ Slack (MET) :             95.018ns  (required time - arrival time)
                             (rising edge-triggered cell FDCE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
   Destination:            uart_inst/inst/upg_inst/s_axi_wdata_reg[1]/CE
 >>>>>>> parent of 84af03e (LJJ)
+=======
+    SLICE_X40Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[0]/C
+                         clock pessimism             -0.485    96.054    
+                         clock uncertainty           -0.199    95.855    
+    SLICE_X40Y50         FDRE (Setup_fdre_C_CE)      -0.205    95.650    uart_inst/inst/upg_inst/s_axi_wdata_reg[0]
+  -------------------------------------------------------------------
+                         required time                         95.650    
+                         arrival time                          -0.632    
+  -------------------------------------------------------------------
+                         slack                                 95.018    
+
+Slack (MET) :             95.018ns  (required time - arrival time)
+  Source:                 uart_inst/inst/upg_inst/msg_indx_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            uart_inst/inst/upg_inst/s_axi_wdata_reg[1]/CE
+>>>>>>> parent of 84af03e (LJJ)
                             (rising edge-triggered cell FDRE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
   Path Group:             upg_clk_clk_wiz_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            100.000ns  (upg_clk_clk_wiz_0 rise@100.000ns - upg_clk_clk_wiz_0 rise@0.000ns)
 <<<<<<< HEAD
+<<<<<<< HEAD
   Data Path Delay:        4.364ns  (logic 1.090ns (24.975%)  route 3.274ns (75.025%))
+=======
+  Data Path Delay:        4.554ns  (logic 1.090ns (23.937%)  route 3.464ns (76.063%))
+>>>>>>> parent of 84af03e (LJJ)
 =======
   Data Path Delay:        4.554ns  (logic 1.090ns (23.937%)  route 3.464ns (76.063%))
 >>>>>>> parent of 84af03e (LJJ)
@@ -1725,8 +1800,13 @@ Slack (MET) :             95.018ns  (required time - arrival time)
                          net (fo=4, routed)           0.604    -0.041    uart_inst/inst/upg_inst/uart_wen5_out
     SLICE_X39Y50         LUT6 (Prop_lut6_I3_O)        0.124     0.083 r  uart_inst/inst/upg_inst/s_axi_wdata[4]_i_1/O
 <<<<<<< HEAD
+<<<<<<< HEAD
                          net (fo=7, routed)           0.360     0.443    uart_inst/inst/upg_inst/s_axi_wdata
     SLICE_X41Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[3]/CE
+=======
+                         net (fo=7, routed)           0.549     0.632    uart_inst/inst/upg_inst/s_axi_wdata
+    SLICE_X40Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[1]/CE
+>>>>>>> parent of 84af03e (LJJ)
 =======
                          net (fo=7, routed)           0.549     0.632    uart_inst/inst/upg_inst/s_axi_wdata
     SLICE_X40Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[1]/CE
@@ -1742,6 +1822,7 @@ Slack (MET) :             95.018ns  (required time - arrival time)
                          net (fo=1, routed)           1.582    95.009    uart_inst/inst/upg_inst/upg_clk_i
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    95.101 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
                          net (fo=169, routed)         1.438    96.538    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
+<<<<<<< HEAD
 <<<<<<< HEAD
     SLICE_X41Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[3]/C
                          clock pessimism             -0.485    96.054    
@@ -1760,6 +1841,16 @@ Slack (MET) :             95.018ns  (required time - arrival time)
                          required time                         95.650    
                          arrival time                          -0.632    
   -------------------------------------------------------------------
+=======
+    SLICE_X40Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[1]/C
+                         clock pessimism             -0.485    96.054    
+                         clock uncertainty           -0.199    95.855    
+    SLICE_X40Y50         FDRE (Setup_fdre_C_CE)      -0.205    95.650    uart_inst/inst/upg_inst/s_axi_wdata_reg[1]
+  -------------------------------------------------------------------
+                         required time                         95.650    
+                         arrival time                          -0.632    
+  -------------------------------------------------------------------
+>>>>>>> parent of 84af03e (LJJ)
                          slack                                 95.018    
 
 Slack (MET) :             95.106ns  (required time - arrival time)
@@ -1952,6 +2043,9 @@ Slack (MET) :             95.207ns  (required time - arrival time)
                          required time                         95.650    
                          arrival time                          -0.443    
   -------------------------------------------------------------------
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
                          slack                                 95.207    
 
@@ -2147,6 +2241,9 @@ Slack (MET) :             95.352ns  (required time - arrival time)
   -------------------------------------------------------------------
                          slack                                 95.352    
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
@@ -2157,6 +2254,7 @@ Slack (MET) :             95.352ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 Slack (MET) :             0.049ns  (arrival time - required time)
@@ -2803,6 +2901,8 @@ Slack (MET) :             95.024ns  (required time - arrival time)
 Slack (MET) :             0.030ns  (arrival time - required time)
   Source:                 uart_inst/inst/upg_inst/s_axi_wdata_reg[0]/C
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
 Slack (MET) :             0.030ns  (arrival time - required time)
   Source:                 uart_inst/inst/upg_inst/s_axi_wdata_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
@@ -2913,6 +3013,9 @@ Slack (MET) :             0.135ns  (arrival time - required time)
   Source:                 uart_inst/inst/upg_inst/msg_indx_reg[3]/C
                             (rising edge-triggered cell FDCE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
   Destination:            uart_inst/inst/upg_inst/s_axi_wdata_reg[6]/D
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
                             (rising edge-triggered cell FDRE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
   Destination:            uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/reset_TX_FIFO_reg/D
@@ -2921,8 +3024,13 @@ Slack (MET) :             0.135ns  (arrival time - required time)
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (upg_clk_clk_wiz_0 rise@0.000ns - upg_clk_clk_wiz_0 rise@0.000ns)
 <<<<<<< HEAD
+<<<<<<< HEAD
   Data Path Delay:        0.408ns  (logic 0.187ns (45.778%)  route 0.221ns (54.222%))
   Logic Levels:           1  (LUT3=1)
+=======
+  Data Path Delay:        0.527ns  (logic 0.186ns (35.303%)  route 0.341ns (64.697%))
+  Logic Levels:           1  (LUT5=1)
+>>>>>>> parent of 84af03e (LJJ)
 =======
   Data Path Delay:        0.527ns  (logic 0.186ns (35.303%)  route 0.341ns (64.697%))
   Logic Levels:           1  (LUT5=1)
@@ -2944,6 +3052,7 @@ Slack (MET) :             0.135ns  (arrival time - required time)
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.355 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
                          net (fo=169, routed)         0.562    -0.794    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
 <<<<<<< HEAD
+<<<<<<< HEAD
     SLICE_X40Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[0]/C
   -------------------------------------------------------------------    -------------------
     SLICE_X40Y50         FDRE (Prop_fdre_C_Q)         0.141    -0.653 r  uart_inst/inst/upg_inst/s_axi_wdata_reg[0]/Q
@@ -2954,11 +3063,18 @@ Slack (MET) :             0.135ns  (arrival time - required time)
 =======
     SLICE_X41Y52         FDCE                                         r  uart_inst/inst/upg_inst/msg_indx_reg[3]/C
   -------------------------------------------------------------------    -------------------
+=======
+    SLICE_X41Y52         FDCE                                         r  uart_inst/inst/upg_inst/msg_indx_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+>>>>>>> parent of 84af03e (LJJ)
     SLICE_X41Y52         FDCE (Prop_fdce_C_Q)         0.141    -0.653 r  uart_inst/inst/upg_inst/msg_indx_reg[3]/Q
                          net (fo=24, routed)          0.341    -0.312    uart_inst/inst/upg_inst/msg_indx_reg__0[3]
     SLICE_X42Y49         LUT5 (Prop_lut5_I3_O)        0.045    -0.267 r  uart_inst/inst/upg_inst/s_axi_wdata[6]_i_2/O
                          net (fo=1, routed)           0.000    -0.267    uart_inst/inst/upg_inst/s_axi_wdata[6]_i_2_n_0
     SLICE_X42Y49         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[6]/D
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
   -------------------------------------------------------------------    -------------------
 
@@ -2970,6 +3086,7 @@ Slack (MET) :             0.135ns  (arrival time - required time)
                                                      -2.641    -2.160 r  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
                          net (fo=1, routed)           0.550    -1.610    uart_inst/inst/upg_inst/upg_clk_i
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.581 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
+<<<<<<< HEAD
 <<<<<<< HEAD
                          net (fo=169, routed)         0.834    -0.748    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/s_axi_aclk
     SLICE_X40Y48         FDSE                                         r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/reset_TX_FIFO_reg/C
@@ -2996,6 +3113,18 @@ Slack (MET) :             0.091ns  (arrival time - required time)
   -------------------------------------------------------------------
                          slack                                  0.135    
 
+=======
+                         net (fo=169, routed)         0.834    -0.748    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
+    SLICE_X42Y49         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[6]/C
+                         clock pessimism              0.226    -0.522    
+    SLICE_X42Y49         FDRE (Hold_fdre_C_D)         0.120    -0.402    uart_inst/inst/upg_inst/s_axi_wdata_reg[6]
+  -------------------------------------------------------------------
+                         required time                          0.402    
+                         arrival time                          -0.267    
+  -------------------------------------------------------------------
+                         slack                                  0.135    
+
+>>>>>>> parent of 84af03e (LJJ)
 Slack (MET) :             0.145ns  (arrival time - required time)
   Source:                 uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/SERIAL_TO_PARALLEL[8].fifo_din_reg[8]/C
 >>>>>>> parent of 84af03e (LJJ)
@@ -3003,6 +3132,7 @@ Slack (MET) :             0.145ns  (arrival time - required time)
   Path Group:             upg_clk_clk_wiz_0
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (upg_clk_clk_wiz_0 rise@0.000ns - upg_clk_clk_wiz_0 rise@0.000ns)
+<<<<<<< HEAD
 <<<<<<< HEAD
   Data Path Delay:        0.454ns  (logic 0.186ns (40.953%)  route 0.268ns (59.047%))
   Logic Levels:           1  (LUT6=1)
@@ -3012,12 +3142,17 @@ Slack (MET) :             0.145ns  (arrival time - required time)
     Clock Pessimism Removal (CPR):    -0.226ns
 >>>>>>> parent of 84af03e (LJJ)
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
   Data Path Delay:        0.344ns  (logic 0.141ns (40.973%)  route 0.203ns (59.027%))
   Logic Levels:           0  
   Clock Path Skew:        0.016ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    -0.750ns
     Source Clock Delay      (SCD):    -0.793ns
     Clock Pessimism Removal (CPR):    0.027ns
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -3271,6 +3406,9 @@ Slack (MET) :             0.145ns  (arrival time - required time)
                          net (fo=3, routed)           0.203    -0.449    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/in[7]
     SLICE_X38Y45         SRL16E                                       r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][7]_srl16/D
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
@@ -3396,6 +3534,8 @@ Slack (MET) :             95.232ns  (required time - arrival time)
 Slack (MET) :             0.154ns  (arrival time - required time)
   Source:                 uart_inst/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[3]/C
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
                             (rising edge-triggered cell FDRE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
   Destination:            uart_inst/inst/upg_inst/uart_rdat_reg[3]/D
@@ -3462,14 +3602,74 @@ Slack (MET) :             0.160ns  (arrival time - required time)
     Destination Clock Delay (DCD):    -0.748ns
     Source Clock Delay      (SCD):    -0.792ns
     Clock Pessimism Removal (CPR):    0.008ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock upg_clk_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    P17                  IBUF                         0.000     0.000 r  fpga_clk_IBUF_inst/O
+                         net (fo=2, routed)           0.440     0.440    cpu_clk_inst/inst/fpga_clk
+    PLLE2_ADV_X0Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.326    -1.885 r  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           0.504    -1.381    uart_inst/inst/upg_inst/upg_clk_i
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.355 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
+                         net (fo=169, routed)         0.564    -0.792    uart_inst/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_aclk
+    SLICE_X39Y47         FDRE                                         r  uart_inst/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y47         FDRE (Prop_fdre_C_Q)         0.141    -0.651 r  uart_inst/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[3]/Q
+                         net (fo=1, routed)           0.115    -0.536    uart_inst/inst/upg_inst/s_axi_rdata[3]
+    SLICE_X40Y47         FDRE                                         r  uart_inst/inst/upg_inst/uart_rdat_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock upg_clk_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    P17                  IBUF                         0.000     0.000 r  fpga_clk_IBUF_inst/O
+                         net (fo=2, routed)           0.481     0.481    cpu_clk_inst/inst/fpga_clk
+    PLLE2_ADV_X0Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.641    -2.160 r  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           0.550    -1.610    uart_inst/inst/upg_inst/upg_clk_i
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.581 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
+                         net (fo=169, routed)         0.834    -0.748    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
+    SLICE_X40Y47         FDRE                                         r  uart_inst/inst/upg_inst/uart_rdat_reg[3]/C
+                         clock pessimism             -0.008    -0.756    
+    SLICE_X40Y47         FDRE (Hold_fdre_C_D)         0.066    -0.690    uart_inst/inst/upg_inst/uart_rdat_reg[3]
+  -------------------------------------------------------------------
+                         required time                          0.690    
+                         arrival time                          -0.536    
+  -------------------------------------------------------------------
+                         slack                                  0.154    
+
+Slack (MET) :             0.160ns  (arrival time - required time)
+  Source:                 uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
+>>>>>>> parent of 84af03e (LJJ)
+                            (rising edge-triggered cell FDRE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            uart_inst/inst/upg_inst/uart_rdat_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             upg_clk_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (upg_clk_clk_wiz_0 rise@0.000ns - upg_clk_clk_wiz_0 rise@0.000ns)
+<<<<<<< HEAD
+  Data Path Delay:        0.256ns  (logic 0.141ns (55.080%)  route 0.115ns (44.920%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.036ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.748ns
+    Source Clock Delay      (SCD):    -0.792ns
+    Clock Pessimism Removal (CPR):    0.008ns
 >>>>>>> parent of 84af03e (LJJ)
 =======
   Data Path Delay:        0.220ns  (logic 0.164ns (74.580%)  route 0.056ns (25.420%))
   Logic Levels:           0  
+=======
+  Data Path Delay:        0.220ns  (logic 0.164ns (74.580%)  route 0.056ns (25.420%))
+  Logic Levels:           0  
+>>>>>>> parent of 84af03e (LJJ)
   Clock Path Skew:        0.000ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    -0.750ns
     Source Clock Delay      (SCD):    -0.794ns
     Clock Pessimism Removal (CPR):    0.044ns
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -3477,6 +3677,7 @@ Slack (MET) :             0.160ns  (arrival time - required time)
                          (clock upg_clk_clk_wiz_0 rise edge)
                                                       0.000     0.000 r  
     P17                  IBUF                         0.000     0.000 r  fpga_clk_IBUF_inst/O
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                          net (fo=2, routed)           1.253     1.253    cpu_clk_inst/inst/fpga_clk
@@ -3849,11 +4050,14 @@ Slack (MET) :             0.122ns  (arrival time - required time)
 =======
 =======
 >>>>>>> parent of 84af03e (LJJ)
+=======
+>>>>>>> parent of 84af03e (LJJ)
                          net (fo=2, routed)           0.440     0.440    cpu_clk_inst/inst/fpga_clk
     PLLE2_ADV_X0Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
                                                      -2.326    -1.885 r  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
                          net (fo=1, routed)           0.504    -1.381    uart_inst/inst/upg_inst/upg_clk_i
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.355 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
+<<<<<<< HEAD
 <<<<<<< HEAD
                          net (fo=169, routed)         0.564    -0.792    uart_inst/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_aclk
     SLICE_X39Y47         FDRE                                         r  uart_inst/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[3]/C
@@ -3862,12 +4066,17 @@ Slack (MET) :             0.122ns  (arrival time - required time)
                          net (fo=1, routed)           0.115    -0.536    uart_inst/inst/upg_inst/s_axi_rdata[3]
     SLICE_X40Y47         FDRE                                         r  uart_inst/inst/upg_inst/uart_rdat_reg[3]/D
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
                          net (fo=169, routed)         0.562    -0.794    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/s_axi_aclk
     SLICE_X42Y40         FDRE                                         r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
   -------------------------------------------------------------------    -------------------
     SLICE_X42Y40         FDRE (Prop_fdre_C_Q)         0.164    -0.630 r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/Q
                          net (fo=1, routed)           0.056    -0.574    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/s_level_out_d1_cdc_to
     SLICE_X42Y40         FDRE                                         r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2/D
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
   -------------------------------------------------------------------    -------------------
 
@@ -3879,6 +4088,7 @@ Slack (MET) :             0.122ns  (arrival time - required time)
                                                      -2.641    -2.160 r  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
                          net (fo=1, routed)           0.550    -1.610    uart_inst/inst/upg_inst/upg_clk_i
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.581 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
+<<<<<<< HEAD
 <<<<<<< HEAD
                          net (fo=169, routed)         0.834    -0.748    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
     SLICE_X40Y47         FDRE                                         r  uart_inst/inst/upg_inst/uart_rdat_reg[3]/C
@@ -3907,6 +4117,8 @@ Slack (MET) :             0.160ns  (arrival time - required time)
     Source Clock Delay      (SCD):    -0.796ns
     Clock Pessimism Removal (CPR):    0.042ns
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
                          net (fo=169, routed)         0.832    -0.750    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/s_axi_aclk
     SLICE_X42Y40         FDRE                                         r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2/C
                          clock pessimism             -0.044    -0.794    
@@ -3931,6 +4143,9 @@ Slack (MET) :             0.162ns  (arrival time - required time)
     Destination Clock Delay (DCD):    -0.748ns
     Source Clock Delay      (SCD):    -0.792ns
     Clock Pessimism Removal (CPR):    0.028ns
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -3943,6 +4158,7 @@ Slack (MET) :             0.162ns  (arrival time - required time)
                                                      -2.326    -1.885 r  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
                          net (fo=1, routed)           0.504    -1.381    uart_inst/inst/upg_inst/upg_clk_i
 <<<<<<< HEAD
+<<<<<<< HEAD
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026    -1.355 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
                          net (fo=170, routed)         0.560    -0.796    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/s_axi_aclk
     SLICE_X33Y37         FDRE                                         r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
@@ -3951,6 +4167,8 @@ Slack (MET) :             0.162ns  (arrival time - required time)
                          net (fo=1, routed)           0.056    -0.599    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/s_level_out_d1_cdc_to
     SLICE_X33Y37         FDRE                                         r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2/D
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.355 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
                          net (fo=169, routed)         0.564    -0.792    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
     SLICE_X42Y49         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[6]/C
@@ -3958,6 +4176,9 @@ Slack (MET) :             0.162ns  (arrival time - required time)
     SLICE_X42Y49         FDRE (Prop_fdre_C_Q)         0.164    -0.628 r  uart_inst/inst/upg_inst/s_axi_wdata_reg[6]/Q
                          net (fo=1, routed)           0.116    -0.512    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/s_axi_wdata[6]
     SLICE_X42Y47         SRL16E                                       r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][1]_srl16/D
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
   -------------------------------------------------------------------    -------------------
 
@@ -3969,6 +4190,7 @@ Slack (MET) :             0.162ns  (arrival time - required time)
                                                      -2.641    -2.160 r  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
                          net (fo=1, routed)           0.550    -1.610    uart_inst/inst/upg_inst/upg_clk_i
 <<<<<<< HEAD
+<<<<<<< HEAD
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029    -1.581 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
                          net (fo=170, routed)         0.828    -0.754    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/s_axi_aclk
     SLICE_X33Y37         FDRE                                         r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2/C
@@ -3978,6 +4200,8 @@ Slack (MET) :             0.162ns  (arrival time - required time)
                          required time                          0.721    
                          arrival time                          -0.599    
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.581 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
                          net (fo=169, routed)         0.834    -0.748    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/s_axi_aclk
     SLICE_X42Y47         SRL16E                                       r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][1]_srl16/CLK
@@ -4002,6 +4226,8 @@ Slack (MET) :             0.165ns  (arrival time - required time)
   Logic Levels:           1  (LUT6=1)
   Clock Path Skew:        0.271ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    -0.749ns
+<<<<<<< HEAD
+=======
     Source Clock Delay      (SCD):    -0.794ns
     Clock Pessimism Removal (CPR):    -0.226ns
 
@@ -4016,6 +4242,61 @@ Slack (MET) :             0.165ns  (arrival time - required time)
                          net (fo=1, routed)           0.504    -1.381    uart_inst/inst/upg_inst/upg_clk_i
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.355 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
                          net (fo=169, routed)         0.562    -0.794    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
+    SLICE_X39Y50         FDCE                                         r  uart_inst/inst/upg_inst/RCS_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y50         FDCE (Prop_fdce_C_Q)         0.141    -0.653 r  uart_inst/inst/upg_inst/RCS_reg[1]/Q
+                         net (fo=9, routed)           0.341    -0.312    uart_inst/inst/upg_inst/RCS_reg_n_0_[1]
+    SLICE_X39Y49         LUT6 (Prop_lut6_I3_O)        0.045    -0.267 r  uart_inst/inst/upg_inst/s_axi_araddr[3]_i_1/O
+                         net (fo=1, routed)           0.000    -0.267    uart_inst/inst/upg_inst/s_axi_araddr[3]_i_1_n_0
+    SLICE_X39Y49         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_araddr_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock upg_clk_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    P17                  IBUF                         0.000     0.000 r  fpga_clk_IBUF_inst/O
+                         net (fo=2, routed)           0.481     0.481    cpu_clk_inst/inst/fpga_clk
+    PLLE2_ADV_X0Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.641    -2.160 r  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           0.550    -1.610    uart_inst/inst/upg_inst/upg_clk_i
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.581 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
+                         net (fo=169, routed)         0.833    -0.749    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
+    SLICE_X39Y49         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_araddr_reg[3]/C
+                         clock pessimism              0.226    -0.523    
+    SLICE_X39Y49         FDRE (Hold_fdre_C_D)         0.091    -0.432    uart_inst/inst/upg_inst/s_axi_araddr_reg[3]
+  -------------------------------------------------------------------
+                         required time                          0.432    
+                         arrival time                          -0.267    
+  -------------------------------------------------------------------
+                         slack                                  0.165    
+
+Slack (MET) :             0.166ns  (arrival time - required time)
+  Source:                 uart_inst/inst/upg_inst/s_axi_wdata_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][5]_srl16/D
+                            (rising edge-triggered cell SRL16E clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             upg_clk_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (upg_clk_clk_wiz_0 rise@0.000ns - upg_clk_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.555ns  (logic 0.141ns (25.407%)  route 0.414ns (74.593%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.272ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.748ns
+>>>>>>> parent of 84af03e (LJJ)
+    Source Clock Delay      (SCD):    -0.794ns
+    Clock Pessimism Removal (CPR):    -0.226ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock upg_clk_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    P17                  IBUF                         0.000     0.000 r  fpga_clk_IBUF_inst/O
+                         net (fo=2, routed)           0.440     0.440    cpu_clk_inst/inst/fpga_clk
+    PLLE2_ADV_X0Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.326    -1.885 r  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           0.504    -1.381    uart_inst/inst/upg_inst/upg_clk_i
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.355 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
+                         net (fo=169, routed)         0.562    -0.794    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
+<<<<<<< HEAD
     SLICE_X39Y50         FDCE                                         r  uart_inst/inst/upg_inst/RCS_reg[1]/C
   -------------------------------------------------------------------    -------------------
     SLICE_X39Y50         FDCE (Prop_fdce_C_Q)         0.141    -0.653 r  uart_inst/inst/upg_inst/RCS_reg[1]/Q
@@ -4188,6 +4469,10 @@ Slack (MET) :             0.162ns  (arrival time - required time)
                          net (fo=169, routed)         0.562    -0.794    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
     SLICE_X41Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[2]/C
   -------------------------------------------------------------------    -------------------
+=======
+    SLICE_X41Y50         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+>>>>>>> parent of 84af03e (LJJ)
     SLICE_X41Y50         FDRE (Prop_fdre_C_Q)         0.141    -0.653 r  uart_inst/inst/upg_inst/s_axi_wdata_reg[2]/Q
                          net (fo=1, routed)           0.414    -0.239    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/s_axi_wdata[2]
     SLICE_X42Y47         SRL16E                                       r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][5]_srl16/D
@@ -4585,6 +4870,9 @@ Slack (MET) :             0.171ns  (arrival time - required time)
                             (rising edge-triggered cell FDRE clocked by upg_clk_clk_wiz_0  {rise@0.000ns fall@50.000ns period=100.000ns})
   Destination:            uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][2]_srl16/D
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
@@ -4592,6 +4880,7 @@ Slack (MET) :             0.171ns  (arrival time - required time)
   Path Group:             upg_clk_clk_wiz_0
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (upg_clk_clk_wiz_0 rise@0.000ns - upg_clk_clk_wiz_0 rise@0.000ns)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Data Path Delay:        0.300ns  (logic 0.164ns (54.746%)  route 0.136ns (45.254%))
@@ -4603,6 +4892,8 @@ Slack (MET) :             0.171ns  (arrival time - required time)
 =======
 =======
 >>>>>>> parent of 84af03e (LJJ)
+=======
+>>>>>>> parent of 84af03e (LJJ)
   Data Path Delay:        0.296ns  (logic 0.141ns (47.618%)  route 0.155ns (52.382%))
   Logic Levels:           0  
   Clock Path Skew:        0.016ns (DCD - SCD - CPR)
@@ -4610,6 +4901,9 @@ Slack (MET) :             0.171ns  (arrival time - required time)
     Source Clock Delay      (SCD):    -0.792ns
     Clock Pessimism Removal (CPR):    0.028ns
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
@@ -4625,6 +4919,7 @@ Slack (MET) :             0.171ns  (arrival time - required time)
                          net (fo=1, routed)           0.504    -1.381    uart_inst/inst/upg_inst/upg_clk_i
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.026    -1.355 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
                          net (fo=170, routed)         0.562    -0.794    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/s_axi_aclk
     SLICE_X34Y43         FDRE                                         r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/SERIAL_TO_PARALLEL[5].fifo_din_reg[5]/C
@@ -4635,6 +4930,8 @@ Slack (MET) :             0.171ns  (arrival time - required time)
 =======
 =======
 >>>>>>> parent of 84af03e (LJJ)
+=======
+>>>>>>> parent of 84af03e (LJJ)
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.355 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
                          net (fo=169, routed)         0.564    -0.792    uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG
     SLICE_X41Y49         FDRE                                         r  uart_inst/inst/upg_inst/s_axi_wdata_reg[5]/C
@@ -4643,6 +4940,9 @@ Slack (MET) :             0.171ns  (arrival time - required time)
                          net (fo=1, routed)           0.155    -0.496    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/s_axi_wdata[5]
     SLICE_X42Y47         SRL16E                                       r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][2]_srl16/D
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
@@ -4655,6 +4955,7 @@ Slack (MET) :             0.171ns  (arrival time - required time)
     PLLE2_ADV_X0Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
                                                      -2.641    -2.160 r  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
                          net (fo=1, routed)           0.550    -1.610    uart_inst/inst/upg_inst/upg_clk_i
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.029    -1.581 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
@@ -4723,6 +5024,8 @@ Slack (MET) :             0.169ns  (arrival time - required time)
 =======
 =======
 >>>>>>> parent of 84af03e (LJJ)
+=======
+>>>>>>> parent of 84af03e (LJJ)
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.581 r  uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/O
                          net (fo=169, routed)         0.834    -0.748    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/s_axi_aclk
     SLICE_X42Y47         SRL16E                                       r  uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][2]_srl16/CLK
@@ -4735,6 +5038,9 @@ Slack (MET) :             0.169ns  (arrival time - required time)
   -------------------------------------------------------------------
                          slack                                  0.171    
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
@@ -4753,6 +5059,7 @@ Sources:            { cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1 }
 Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
 Min Period        n/a     BUFG/I             n/a            2.155         100.000     97.845     BUFGCTRL_X0Y2   uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG_inst/I
 Min Period        n/a     PLLE2_ADV/CLKOUT1  n/a            1.249         100.000     98.751     PLLE2_ADV_X0Y0  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 Min Period        n/a     FDCE/C             n/a            1.000         100.000     99.000     SLICE_X39Y43    uart_inst/inst/upg_inst/initFlag_reg/C
@@ -6048,6 +6355,17 @@ Min Period        n/a     FDRE/C             n/a            1.000         100.00
 Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X38Y47    uart_inst/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3]/C
 Max Period        n/a     PLLE2_ADV/CLKOUT1  n/a            160.000       100.000     60.000     PLLE2_ADV_X0Y0  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
 >>>>>>> parent of 84af03e (LJJ)
+=======
+Min Period        n/a     FDCE/C             n/a            1.000         100.000     99.000     SLICE_X39Y51    uart_inst/inst/upg_inst/WCS_reg[0]/C
+Min Period        n/a     FDCE/C             n/a            1.000         100.000     99.000     SLICE_X39Y52    uart_inst/inst/upg_inst/WCS_reg[1]/C
+Min Period        n/a     FDCE/C             n/a            1.000         100.000     99.000     SLICE_X39Y52    uart_inst/inst/upg_inst/WCS_reg[2]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X38Y48    uart_inst/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_reg/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X38Y47    uart_inst/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X38Y47    uart_inst/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X38Y47    uart_inst/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg[2]/C
+Min Period        n/a     FDRE/C             n/a            1.000         100.000     99.000     SLICE_X38Y47    uart_inst/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3]/C
+Max Period        n/a     PLLE2_ADV/CLKOUT1  n/a            160.000       100.000     60.000     PLLE2_ADV_X0Y0  cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1
+>>>>>>> parent of 84af03e (LJJ)
 Low Pulse Width   Fast    SRL16E/CLK         n/a            0.980         50.000      49.020     SLICE_X38Y45    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][3]_srl16/CLK
 Low Pulse Width   Fast    SRL16E/CLK         n/a            0.980         50.000      49.020     SLICE_X38Y45    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][4]_srl16/CLK
 Low Pulse Width   Fast    SRL16E/CLK         n/a            0.980         50.000      49.020     SLICE_X38Y45    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][5]_srl16/CLK
@@ -6069,6 +6387,9 @@ High Pulse Width  Slow    SRL16E/CLK         n/a            0.980         50.000
 High Pulse Width  Fast    SRL16E/CLK         n/a            0.980         50.000      49.020     SLICE_X38Y45    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][5]_srl16/CLK
 High Pulse Width  Slow    SRL16E/CLK         n/a            0.980         50.000      49.020     SLICE_X38Y45    uart_inst/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[15][6]_srl16/CLK
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)

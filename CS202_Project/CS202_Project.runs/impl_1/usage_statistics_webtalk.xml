@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Wed May 17 23:02:36 2023'>
+=======
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Tue May 16 02:17:27 2023'>
+>>>>>>> parent of 84af03e (LJJ)
 =======
 <webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Tue May 16 02:17:27 2023'>
 >>>>>>> parent of 84af03e (LJJ)
@@ -14,11 +18,19 @@
   <keyValuePair key="build_version" value="2086221" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <keyValuePair key="date_generated" value="Wed May 17 23:02:36 2023" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2017.4 (64-bit)" description="" />
   <keyValuePair key="project_id" value="6cf6662e203043ff97762acd9ab52aef" description="" />
   <keyValuePair key="project_iteration" value="9" description="" />
+=======
+  <keyValuePair key="date_generated" value="Tue May 16 02:17:27 2023" description="" />
+  <keyValuePair key="os_platform" value="WIN64" description="" />
+  <keyValuePair key="product_version" value="Vivado v2017.4 (64-bit)" description="" />
+  <keyValuePair key="project_id" value="6cf6662e203043ff97762acd9ab52aef" description="" />
+  <keyValuePair key="project_iteration" value="2" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
   <keyValuePair key="date_generated" value="Tue May 16 02:17:27 2023" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
@@ -282,7 +294,11 @@
    <keyValuePair key="dsp_output_toggle" value="12.500000" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="dynamic" value="0.120472" description="" />
+=======
+   <keyValuePair key="dynamic" value="0.101135" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
    <keyValuePair key="dynamic" value="0.101135" description="" />
 >>>>>>> parent of 84af03e (LJJ)
@@ -311,7 +327,11 @@
    <keyValuePair key="off-chip_power" value="0.000000" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="on-chip_power" value="0.193785" description="" />
+=======
+   <keyValuePair key="on-chip_power" value="0.173036" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
    <keyValuePair key="on-chip_power" value="0.173036" description="" />
 >>>>>>> parent of 84af03e (LJJ)
@@ -334,7 +354,11 @@
    <keyValuePair key="signal_rate" value="False" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="signals" value="0.008929" description="" />
+=======
+   <keyValuePair key="signals" value="0.000175" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
    <keyValuePair key="signals" value="0.000175" description="" />
 >>>>>>> parent of 84af03e (LJJ)
@@ -371,9 +395,15 @@
    <keyValuePair key="vccbram_voltage" value="1.000000" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="vccint_dynamic_current" value="0.027470" description="" />
    <keyValuePair key="vccint_static_current" value="0.010428" description="" />
    <keyValuePair key="vccint_total_current" value="0.037898" description="" />
+=======
+   <keyValuePair key="vccint_dynamic_current" value="0.008558" description="" />
+   <keyValuePair key="vccint_static_current" value="0.009708" description="" />
+   <keyValuePair key="vccint_total_current" value="0.018266" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
    <keyValuePair key="vccint_dynamic_current" value="0.008558" description="" />
    <keyValuePair key="vccint_static_current" value="0.009708" description="" />
@@ -567,6 +597,7 @@
    <keyValuePair key="lut_as_logic_fixed" value="0" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="lut_as_logic_used" value="2073" description="" />
    <keyValuePair key="lut_as_logic_used" value="2073" description="" />
    <keyValuePair key="lut_as_logic_util_percentage" value="9.97" description="" />
@@ -574,11 +605,16 @@
 =======
 =======
 >>>>>>> parent of 84af03e (LJJ)
+=======
+>>>>>>> parent of 84af03e (LJJ)
    <keyValuePair key="lut_as_logic_used" value="250" description="" />
    <keyValuePair key="lut_as_logic_used" value="250" description="" />
    <keyValuePair key="lut_as_logic_util_percentage" value="1.20" description="" />
    <keyValuePair key="lut_as_logic_util_percentage" value="1.20" description="" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
@@ -597,10 +633,13 @@
    <keyValuePair key="lut_ff_pairs_with_one_unused_flip_flop_fixed" value="10" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="lut_ff_pairs_with_one_unused_flip_flop_used" value="120" description="" />
    <keyValuePair key="lut_ff_pairs_with_one_unused_lut_output_fixed" value="120" description="" />
    <keyValuePair key="lut_ff_pairs_with_one_unused_lut_output_used" value="122" description="" />
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
    <keyValuePair key="lut_ff_pairs_with_one_unused_flip_flop_used" value="85" description="" />
@@ -625,6 +664,7 @@
    <keyValuePair key="slice_luts_fixed" value="0" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="slice_luts_used" value="2083" description="" />
    <keyValuePair key="slice_luts_util_percentage" value="10.01" description="" />
    <keyValuePair key="slice_registers_available" value="41600" description="" />
@@ -640,6 +680,8 @@
    <keyValuePair key="unique_control_sets_used" value="324" description="" />
    <keyValuePair key="using_o5_and_o6_fixed" value="324" description="" />
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
    <keyValuePair key="slice_luts_used" value="260" description="" />
@@ -706,7 +748,11 @@
   <section name="usage" level="2" order="1" description="">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="actual_expansions" value="245429091" description="" />
+=======
+   <keyValuePair key="actual_expansions" value="553159" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
    <keyValuePair key="actual_expansions" value="553159" description="" />
 >>>>>>> parent of 84af03e (LJJ)
@@ -724,6 +770,7 @@
    <keyValuePair key="effort" value="2" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="estimated_expansions" value="4790328" description="" />
    <keyValuePair key="ff" value="1486" description="" />
    <keyValuePair key="global_clocks" value="4" description="" />
@@ -734,6 +781,8 @@
    <keyValuePair key="nets" value="4769" description="" />
    <keyValuePair key="pins" value="29906" description="" />
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
    <keyValuePair key="estimated_expansions" value="279582" description="" />
@@ -793,10 +842,17 @@
   <section name="usage" level="2" order="2" description="">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="elapsed" value="00:01:35s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
    <keyValuePair key="memory_gain" value="692.641MB" description="" />
    <keyValuePair key="memory_peak" value="922.820MB" description="" />
+=======
+   <keyValuePair key="elapsed" value="00:00:42s" description="" />
+   <keyValuePair key="hls_ip" value="0" description="" />
+   <keyValuePair key="memory_gain" value="657.219MB" description="" />
+   <keyValuePair key="memory_peak" value="887.477MB" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
    <keyValuePair key="elapsed" value="00:00:42s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
@@ -867,10 +923,13 @@
    <keyValuePair key="addsrcwizard_specify_or_create_constraint_files" value="1" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="basedialog_ok" value="73" description="" />
    <keyValuePair key="basedialog_yes" value="20" description="" />
    <keyValuePair key="cmdmsgdialog_ok" value="10" description="" />
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
    <keyValuePair key="basedialog_ok" value="48" description="" />
@@ -888,9 +947,15 @@
    <keyValuePair key="definemodulesdialog_new_source_files" value="6" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="filesetpanel_file_set_panel_tree" value="158" description="" />
    <keyValuePair key="filesetpanel_messages" value="1" description="" />
    <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="99" description="" />
+=======
+   <keyValuePair key="filesetpanel_file_set_panel_tree" value="154" description="" />
+   <keyValuePair key="filesetpanel_messages" value="1" description="" />
+   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="39" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
    <keyValuePair key="filesetpanel_file_set_panel_tree" value="154" description="" />
    <keyValuePair key="filesetpanel_messages" value="1" description="" />
@@ -919,7 +984,11 @@
    <keyValuePair key="pacommandnames_add_sources" value="6" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="pacommandnames_auto_connect_target" value="18" description="" />
+=======
+   <keyValuePair key="pacommandnames_auto_connect_target" value="1" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
    <keyValuePair key="pacommandnames_auto_connect_target" value="1" description="" />
 >>>>>>> parent of 84af03e (LJJ)
@@ -931,8 +1000,11 @@
    <keyValuePair key="pacommandnames_fit_selection" value="1" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="pacommandnames_open_hardware_manager" value="4" description="" />
    <keyValuePair key="pacommandnames_reports_window" value="2" description="" />
+=======
+>>>>>>> parent of 84af03e (LJJ)
 =======
 >>>>>>> parent of 84af03e (LJJ)
 =======
@@ -951,9 +1023,13 @@
    <keyValuePair key="primitivesmenu_select_leaf_cells" value="1" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="programdebugtab_refresh_device" value="1" description="" />
    <keyValuePair key="programfpgadialog_program" value="17" description="" />
    <keyValuePair key="programfpgadialog_specify_bitstream_file" value="6" description="" />
+=======
+   <keyValuePair key="programfpgadialog_program" value="1" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
    <keyValuePair key="programfpgadialog_program" value="1" description="" />
 >>>>>>> parent of 84af03e (LJJ)
@@ -989,6 +1065,7 @@
    <keyValuePair key="syntheticagettingstartedview_recent_projects" value="3" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="syntheticastatemonitor_cancel" value="4" description="" />
    <keyValuePair key="taskbanner_close" value="9" description="" />
    <keyValuePair key="touchpointsurveydialog_yes" value="1" description="" />
@@ -996,6 +1073,13 @@
   <section name="java_command_handlers" level="2" order="2" description="">
    <keyValuePair key="addsources" value="6" description="" />
    <keyValuePair key="autoconnecttarget" value="18" description="" />
+=======
+   <keyValuePair key="taskbanner_close" value="1" description="" />
+  </section>
+  <section name="java_command_handlers" level="2" order="2" description="">
+   <keyValuePair key="addsources" value="6" description="" />
+   <keyValuePair key="autoconnecttarget" value="1" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
    <keyValuePair key="taskbanner_close" value="1" description="" />
   </section>
@@ -1018,6 +1102,7 @@
    <keyValuePair key="fitselection" value="1" description="" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="launchprogramfpga" value="17" description="" />
    <keyValuePair key="managecompositetargets" value="1" description="" />
    <keyValuePair key="newproject" value="1" description="" />
@@ -1027,6 +1112,16 @@
    <keyValuePair key="recustomizecore" value="4" description="" />
    <keyValuePair key="refreshdevice" value="1" description="" />
    <keyValuePair key="runbitgen" value="23" description="" />
+=======
+   <keyValuePair key="launchprogramfpga" value="1" description="" />
+   <keyValuePair key="managecompositetargets" value="1" description="" />
+   <keyValuePair key="newproject" value="1" description="" />
+   <keyValuePair key="openhardwaremanager" value="2" description="" />
+   <keyValuePair key="openrecenttarget" value="2" description="" />
+   <keyValuePair key="programdevice" value="1" description="" />
+   <keyValuePair key="recustomizecore" value="4" description="" />
+   <keyValuePair key="runbitgen" value="10" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
    <keyValuePair key="launchprogramfpga" value="1" description="" />
    <keyValuePair key="managecompositetargets" value="1" description="" />
@@ -1059,7 +1154,11 @@
   <section name="other_data" level="2" order="3" description="">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    <keyValuePair key="guimode" value="7" description="" />
+=======
+   <keyValuePair key="guimode" value="3" description="" />
+>>>>>>> parent of 84af03e (LJJ)
 =======
    <keyValuePair key="guimode" value="3" description="" />
 >>>>>>> parent of 84af03e (LJJ)
