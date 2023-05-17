@@ -147,7 +147,7 @@ module CPU(input fpga_clk,        //100mHz
     .Branch(Branch),
     .nBranch(nBranch),
     .RegDST(RegDST),
-    .MemOrIOtoReg(MemOrIOtoReg),
+    .MemtoReg(MemOrIOtoReg),
     .RegWrite(RegWrite),
     .MemRead(MemRead),
     .MemWrite(MemWrite),
