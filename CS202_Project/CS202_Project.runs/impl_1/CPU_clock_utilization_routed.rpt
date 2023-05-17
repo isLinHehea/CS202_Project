@@ -1,7 +1,11 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+<<<<<<< HEAD
 | Date         : Wed May 17 23:02:24 2023
+=======
+| Date         : Tue May 16 02:17:18 2023
+>>>>>>> parent of 84af03e (LJJ)
 | Host         : LAPTOP-7DFI8QQJ running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file CPU_clock_utilization_routed.rpt
 | Design       : CPU
@@ -62,10 +66,16 @@ Table of Contents
 +-----------+-----------+--------------------+------------+----------------+--------------+-------------+-----------------+---------------------+--------------------+-------------------------------------------+--------------------------------------+
 | Source Id | Global Id | Driver Type/Pin    | Constraint | Site           | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock       | Driver Pin                                | Net                                  |
 +-----------+-----------+--------------------+------------+----------------+--------------+-------------+-----------------+---------------------+--------------------+-------------------------------------------+--------------------------------------+
+<<<<<<< HEAD
 | src0      | g3        | PLLE2_ADV/CLKFBOUT | None       | PLLE2_ADV_X0Y0 | X0Y0         |           1 |               0 |              50.000 | clkfbout_clk_wiz_0 | cpu_clk_inst/inst/plle2_adv_inst/CLKFBOUT | cpu_clk_inst/inst/clkfbout_clk_wiz_0 |
 | src0      | g0        | PLLE2_ADV/CLKOUT0  | None       | PLLE2_ADV_X0Y0 | X0Y0         |           1 |               0 |              43.478 | cpu_clk_clk_wiz_0  | cpu_clk_inst/inst/plle2_adv_inst/CLKOUT0  | cpu_clk_inst/inst/cpu_clk_clk_wiz_0  |
 | src0      | g2        | PLLE2_ADV/CLKOUT1  | None       | PLLE2_ADV_X0Y0 | X0Y0         |           1 |               0 |             100.000 | upg_clk_clk_wiz_0  | cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1  | cpu_clk_inst/inst/upg_clk_clk_wiz_0  |
 | src1      | g1        | FDCE/Q             | None       | SLICE_X36Y44   | X1Y0         |           1 |               6 |                     |                    | uart_inst/inst/upg_inst/rdStat_reg/Q      | uart_inst/inst/upg_inst/rdStat       |
+=======
+| src0      | g2        | PLLE2_ADV/CLKFBOUT | None       | PLLE2_ADV_X0Y0 | X0Y0         |           1 |               0 |              50.000 | clkfbout_clk_wiz_0 | cpu_clk_inst/inst/plle2_adv_inst/CLKFBOUT | cpu_clk_inst/inst/clkfbout_clk_wiz_0 |
+| src0      | g0        | PLLE2_ADV/CLKOUT1  | None       | PLLE2_ADV_X0Y0 | X0Y0         |           1 |               0 |             100.000 | upg_clk_clk_wiz_0  | cpu_clk_inst/inst/plle2_adv_inst/CLKOUT1  | cpu_clk_inst/inst/upg_clk_clk_wiz_0  |
+| src1      | g1        | FDCE/Q             | None       | SLICE_X39Y50   | X1Y1         |           1 |               6 |                     |                    | uart_inst/inst/upg_inst/rdStat_reg/Q      | uart_inst/inst/upg_inst/rdStat       |
+>>>>>>> parent of 84af03e (LJJ)
 +-----------+-----------+--------------------+------------+----------------+--------------+-------------+-----------------+---------------------+--------------------+-------------------------------------------+--------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -79,10 +89,17 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+<<<<<<< HEAD
 | X0Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  382 |  1200 |   91 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1099 |  1500 |  331 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1500 |    0 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
+=======
+| X0Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  180 |  1500 |   59 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  108 |  1500 |   22 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
+>>>>>>> parent of 84af03e (LJJ)
 | X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1800 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y2              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |   950 |    0 |   300 |    0 |    10 |    0 |     5 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
@@ -143,8 +160,13 @@ All Modules
 |    | X0 | X1   |
 +----+----+------+
 | Y2 |  0 |    0 |
+<<<<<<< HEAD
 | Y1 |  0 |    0 |
 | Y0 |  0 |  208 |
+=======
+| Y1 |  0 |   38 |
+| Y0 |  0 |  131 |
+>>>>>>> parent of 84af03e (LJJ)
 +----+----+------+
 
 
@@ -162,6 +184,7 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
+<<<<<<< HEAD
 +----+-----+-----+
 |    | X0  | X1  |
 +----+-----+-----+
@@ -169,6 +192,15 @@ All Modules
 | Y1 |   0 |   0 |
 | Y0 |  84 |  86 |
 +----+-----+-----+
+=======
++----+----+-----+
+|    | X0 | X1  |
++----+----+-----+
+| Y2 |  0 |   0 |
+| Y1 |  0 |  70 |
+| Y0 |  0 |  66 |
++----+----+-----+
+>>>>>>> parent of 84af03e (LJJ)
 
 
 9. Device Cell Placement Summary for Global Clock g3
@@ -200,9 +232,14 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------+
+<<<<<<< HEAD
 | g0        | n/a   | BUFG/O          | None       |         307 |               0 | 307 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | cpu_clk_inst/inst/cpu_clk                   |
 | g2        | n/a   | BUFG/O          | None       |          84 |               0 |  75 |      9 |    0 |   0 |  0 |    0 |   0 |       0 | uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG |
 | g3        | n/a   | BUFG/O          | None       |           1 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   1 |       0 | cpu_clk_inst/inst/clkfbout_buf_clk_wiz_0    |
+=======
+| g0        | n/a   | BUFG/O          | None       |         131 |               0 | 114 |     17 |    0 |   0 |  0 |    0 |   0 |       0 | uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG |
+| g1        | n/a   | BUFG/O          | None       |          66 |               0 |  66 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | uart_inst/inst/upg_inst/rdStat_BUFG         |
+>>>>>>> parent of 84af03e (LJJ)
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -212,6 +249,7 @@ All Modules
 11. Clock Region Cell Placement per Global Clock: Region X1Y0
 -------------------------------------------------------------
 
+<<<<<<< HEAD
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------+
@@ -219,6 +257,14 @@ All Modules
 | g1        | n/a   | BUFG/O          | None       |         208 |               0 | 208 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | uart_inst/inst/upg_inst/rdStat_BUFG         |
 | g2        | n/a   | BUFG/O          | None       |          86 |               0 |  78 |      8 |    0 |   0 |  0 |    0 |   0 |       0 | uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------+
+=======
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          38 |               0 | 38 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | uart_inst/inst/upg_inst/upg_clk_i_IBUF_BUFG |
+| g1        | n/a   | BUFG/O          | None       |          70 |               0 | 70 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | uart_inst/inst/upg_inst/rdStat_BUFG         |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------+
+>>>>>>> parent of 84af03e (LJJ)
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts

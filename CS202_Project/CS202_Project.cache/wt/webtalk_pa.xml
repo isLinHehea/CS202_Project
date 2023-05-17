@@ -3,10 +3,17 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
+<<<<<<< HEAD
 <application name="pa" timeStamp="Wed May 17 23:07:18 2023">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="e5dd11f4c7674b6983b430ebe47a0995" type="ProjectID"/>
 <property name="ProjectIteration" value="22" type="ProjectIteration"/>
+=======
+<application name="pa" timeStamp="Tue May 16 02:27:01 2023">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="e5dd11f4c7674b6983b430ebe47a0995" type="ProjectID"/>
+<property name="ProjectIteration" value="11" type="ProjectIteration"/>
+>>>>>>> parent of 84af03e (LJJ)
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -33,7 +40,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ProgramDevice" value="24" type="JavaHandler"/>
 <property name="RecustomizeCore" value="4" type="JavaHandler"/>
 <property name="RefreshDevice" value="1" type="JavaHandler"/>
+<<<<<<< HEAD
 <property name="RunBitgen" value="23" type="JavaHandler"/>
+=======
+<property name="RunBitgen" value="10" type="JavaHandler"/>
+>>>>>>> parent of 84af03e (LJJ)
 <property name="RunSchematic" value="7" type="JavaHandler"/>
 <property name="RunSynthesis" value="1" type="JavaHandler"/>
 <property name="ShowView" value="14" type="JavaHandler"/>
@@ -47,9 +58,15 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AbstractSearchablePanel_SHOW_SEARCH" value="1" type="GuiHandlerData"/>
 <property name="AddRepositoryInfoDialog_OK" value="1" type="GuiHandlerData"/>
 <property name="AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES" value="1" type="GuiHandlerData"/>
+<<<<<<< HEAD
 <property name="BaseDialog_OK" value="76" type="GuiHandlerData"/>
 <property name="BaseDialog_YES" value="20" type="GuiHandlerData"/>
 <property name="CmdMsgDialog_OK" value="11" type="GuiHandlerData"/>
+=======
+<property name="BaseDialog_OK" value="52" type="GuiHandlerData"/>
+<property name="BaseDialog_YES" value="10" type="GuiHandlerData"/>
+<property name="CmdMsgDialog_OK" value="1" type="GuiHandlerData"/>
+>>>>>>> parent of 84af03e (LJJ)
 <property name="ConstraintsChooserPanel_CREATE_FILE" value="1" type="GuiHandlerData"/>
 <property name="CoreAndInterfacesBaseTreeTablePanel_ADD_REPOSITORY" value="1" type="GuiHandlerData"/>
 <property name="CoreBrowserView_COLLAPSE_ALL" value="2" type="GuiHandlerData"/>
@@ -59,9 +76,15 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="CreateConstraintsFilePanel_FILE_NAME" value="1" type="GuiHandlerData"/>
 <property name="CreateSrcFileDialog_FILE_NAME" value="19" type="GuiHandlerData"/>
 <property name="DefineModulesDialog_NEW_SOURCE_FILES" value="6" type="GuiHandlerData"/>
+<<<<<<< HEAD
 <property name="FileSetPanel_FILE_SET_PANEL_TREE" value="159" type="GuiHandlerData"/>
 <property name="FileSetPanel_MESSAGES" value="1" type="GuiHandlerData"/>
 <property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="101" type="GuiHandlerData"/>
+=======
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="154" type="GuiHandlerData"/>
+<property name="FileSetPanel_MESSAGES" value="1" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="48" type="GuiHandlerData"/>
+>>>>>>> parent of 84af03e (LJJ)
 <property name="GettingStartedView_CREATE_NEW_PROJECT" value="1" type="GuiHandlerData"/>
 <property name="HJFileChooserRecentListPreview_RECENT_DIRECTORIES" value="3" type="GuiHandlerData"/>
 <property name="HPopupTitle_CLOSE" value="1" type="GuiHandlerData"/>
@@ -136,6 +159,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="GuiMode" value="32" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
 <property name="TclMode" value="30" type="TclMode"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="28" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="27" type="TclMode"/>
 </item>
 </section>
 </application>

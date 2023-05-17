@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1684335329">
+=======
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1684174536">
+>>>>>>> parent of 84af03e (LJJ)
   <File Type="PA-TCL" Name="CPU.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="CPU_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="CPU_reports.tcl"/>

@@ -1,7 +1,11 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+<<<<<<< HEAD
 | Date             : Wed May 17 23:02:24 2023
+=======
+| Date             : Tue May 16 02:17:17 2023
+>>>>>>> parent of 84af03e (LJJ)
 | Host             : LAPTOP-7DFI8QQJ running 64-bit major release  (build 9200)
 | Command          : report_power -file CPU_power_routed.rpt -pb CPU_power_summary_routed.pb -rpx CPU_power_routed.rpx
 | Design           : CPU
@@ -52,6 +56,7 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
+<<<<<<< HEAD
 | Clocks                  |     0.002 |        6 |       --- |             --- |
 | Slice Logic             |     0.005 |     4239 |       --- |             --- |
 |   LUT as Logic          |     0.005 |     2073 |     20800 |            9.97 |
@@ -63,6 +68,17 @@ Table of Contents
 |   Others                |     0.000 |      122 |       --- |             --- |
 | Signals                 |     0.009 |     3686 |       --- |             --- |
 | Block RAM               |     0.005 |       29 |        50 |           58.00 |
+=======
+| Clocks                  |    <0.001 |        5 |       --- |             --- |
+| Slice Logic             |    <0.001 |      694 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      250 |     20800 |            1.20 |
+|   CARRY4                |    <0.001 |       20 |      8150 |            0.25 |
+|   Register              |    <0.001 |      289 |     41600 |            0.69 |
+|   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
+|   LUT as Shift Register |    <0.001 |       10 |      9600 |            0.10 |
+|   Others                |     0.000 |       26 |       --- |             --- |
+| Signals                 |    <0.001 |      516 |       --- |             --- |
+>>>>>>> parent of 84af03e (LJJ)
 | PLL                     |     0.100 |        1 |         5 |           20.00 |
 | I/O                     |    <0.001 |       61 |       210 |           29.05 |
 | Static Power            |     0.073 |          |           |                 |

@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
+<<<<<<< HEAD
     <Process Command="vivado.bat" Owner="LJJ" Host="LAPTOP-7DFI8QQJ" Pid="7400">
+=======
+    <Process Command="vivado.bat" Owner="LJJ" Host="LAPTOP-7DFI8QQJ" Pid="1952">
+>>>>>>> parent of 84af03e (LJJ)
     </Process>
 </ProcessHandle>
