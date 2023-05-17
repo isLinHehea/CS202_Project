@@ -6,9 +6,14 @@
 .data
 
 .text
-lw $t1, 0XC70($31) # input the testcase id
+forever:
+	lw $t1, 0XC70($31) # input the testcase id
+	andi $t2,$t1,0x00000080
+	beq $t2,1,select
+	j forever
 
 #select the case
+select:
 
 beq $t1,0,case0
 beq $t1,1,case1
@@ -18,12 +23,27 @@ beq $t1,4,case4
 beq $t1,5,case5
 beq $t1,6,case6
 beq $t1,7,case7
-j Exit
+j forever
+
+loadword1:
+	lw $t2, 0XC70($31) #a
+	andi $t3,$2,0x00000040
+	beq $t3,1,back
+	j loadword1
+	
+loadword2:
+	lw $t3, 0XC70($31) #b
+	andi $t4,$3,0x00000020
+	beq $t4,1,back
+	j loadword2
+	
+back:
+	jr $ra
 
 
 #inout a  signed number a, and out put the sum of 1 to a, if a is negative, give a blinking prompt
 case0:
-	lw $t2, 0XC70($31)
+	jal loadword1
 	srl $t3,$t2,7
 	beq $t3 ,1 ,blink
 	li $t4,0
@@ -37,21 +57,21 @@ loop0:
 
 blink:
 	sw $t2, 0XC62($31)#blink
-	j Exit
+	j forever
 
 print0:
 	sw $t5, 0XC60($31)
-	j Exit
+	j forever
 
 #input an unsigned number a, recursively calculate the sum of 1 to a,display the times the stack was pushed and popped
 case1:
-	lw $a0, 0XC70($31)
+	jal loadword1
 	li $t3,0 #pushed times
 	li $t4,0 #popped times
 	jal sum
 	add $t5,$t3,$t4
 	sw $t5, 0XC60($31) 
-	j Exit
+	j forever
 	
 	
 	
@@ -78,11 +98,11 @@ L1:
  	 	
 #input an unsigned number a, recursively calculate the sum of 1 to a,display every  pushed arguments 2-3s	 	 	 	 	
 case2:
-	lw $a0, 0XC70($31)
+	jal loadword1
 	#li $t3,0 #pushed times
 	#li $t4,0 #popped times
 	jal sum1
-	j Exit
+	j forever
 	
 
 sum1:
@@ -119,11 +139,11 @@ jra:   jr  $ra
 	
 #input an unsigned number a, recursively calculate the sum of 1 to a,display every  popped arguments 2-3s	 	 	 	 	
 case3:
-	lw $a0, 0XC70($31)
+	jal loadword1
 	#li $t3,0 #pushed times
 	#li $t4,0 #popped times
 	jal sum2
-	j Exit
+	j forever
 
 		
 
@@ -153,8 +173,8 @@ L3:
 
 #input a and b, then calculate a + b and judge overflow
 case4:
-	lw $t2, 0XC70($31)#a
-	lw $t3, 0XC70($31)#b
+	jal loadword1
+	jal loadword2
 	add $t4, $t2,$t3
 	srl $t5,$t2,7#the sign of a
 	srl $t6,$t3,7#the sign of b
@@ -170,7 +190,7 @@ Overflow:
 	sll $t5,$t4,1
 	addi $t5,$t5,1
 	sw $t5,0XC60($31)#output in the format{sum, OverfolwBit}
-	j Exit
+	j forever
 	
 noOverflow:
 	sll $t5,$t4,1
@@ -179,8 +199,8 @@ noOverflow:
 	
 #input a and b, then calculate a - b and judge overflow
 case5:
-	lw $t2, 0XC70($31)#a
-	lw $t3, 0XC70($31)#b
+	jal loadword1
+	jal loadword2
 	sub $t4, $t2,$t3
 	srl $t5,$t2,7#the sign of a
 	srl $t6,$t3,7#the sign of b
@@ -196,16 +216,16 @@ judge5:
 	
 #input two number a and b, calculate a*b and output the answer	
 case6:
-	lw $t2, 0XC70($31)#a
-	lw $t3, 0XC70($31)#b
+	jal loadword1
+	jal loadword2
 	mul $t4, $t2,$t3
 	sw $t4,0XC60($31)
-	j Exit
+	j forever
 	
 #input two number a and b, calculate a / b and display the quotient and remainder alternately(5s)
 case7:
-	lw $t2, 0XC70($31)#a
-	lw $t3, 0XC70($31)#b
+	jal loadword1
+	jal loadword2
 	div $t4, $t2,$t3 #quotient
 	rem $t5, $t2,$t3 #remainder
 	li $t6 , 0
