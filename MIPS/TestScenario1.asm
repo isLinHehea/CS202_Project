@@ -13,7 +13,7 @@ beq $t1,0,case0
 beq $t1,1,case1
 beq $t1,2,case2
 beq $t1,3,case3
-beq $t1,4,case4
+beq $t1,4,case4x
 beq $t1,5,case5
 beq $t1,6,case6
 beq $t1,7,case7

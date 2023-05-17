@@ -44,8 +44,8 @@ module Switch(clk,
         else if (SwitchCtrl && SwitchRead) begin
             if (SwitchAddr == 2'b00)
                 SwitchRdata[15:0] <= Switch[15:0];
-            else if (SwitchAddr == 2'b10)
-                SwitchRdata[15:0] <= { 8'h00, Switch[7:0] };
+            // else if (SwitchAddr == 2'b10)
+            //     SwitchRdata[15:0] <= 16'H00FF;
             else
                 SwitchRdata <= SwitchRdata;
         end

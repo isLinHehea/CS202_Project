@@ -69,7 +69,7 @@ module CPU(input fpga_clk,        //100mHz
     .upg_tx_o(tx)
     );
     
-    wire RegDst, Branch, nBranch, RegWrite, ALUSrc, MemWrite, MemorIOtoReg;
+    wire RegDst, Branch, nBranch, RegWrite, ALUSrc, MemWrite, MemOrIOtoReg;
     wire [1:0] ALUOp;
     wire Jmp, Jal, Jr, Zero, MemRead, IORead, IOWrite, I_format, Sftmd;
     wire LEDCtrl, SwitchCtrl, TubeCtrl, UartCtrl;
@@ -128,7 +128,7 @@ module CPU(input fpga_clk,        //100mHz
     .ALU_result(ALU_result),
     .Jal(Jal),
     .RegWrite(RegWrite),
-    .MemtoReg(MemorIOtoReg),
+    .MemtoReg(MemOrIOtoReg),
     .RegDst(RegDst),
     .link_addr(link_addr),
     .Sign_extend(Sign_extend),
@@ -173,6 +173,25 @@ module CPU(input fpga_clk,        //100mHz
     .upg_dat_i(upg_dat_o),
     .upg_done_i(upg_done_o)
     );
+
+    //  Executer
+    Executer Executer_inst (
+    .read_data_1(read_data_1),
+    .read_data_2(read_data_2),
+    .Sign_extend(Sign_extend),
+    .Func_opcode(Instruction[5:0]),
+    .Opcode(Instruction[31:26]),
+    .Shamt(Instruction[10:6]),
+    .branch_base_addr(branch_base_addr),
+    .ALUOp(ALUOp),
+    .ALUSrc(ALUSrc),
+    .I_format(I_format),
+    .Sftmd(Sftmd),
+    .Jr(Jr),
+    .Zero(Zero),
+    .ALU_result(ALU_result),
+    .Addr_result(Addr_result)
+    );
     
     // MemOrIO
     MemOrIO  MemOrIO_inst(
@@ -192,25 +211,6 @@ module CPU(input fpga_clk,        //100mHz
     .TubeCtrl(TubeCtrl),
     .UartCtrl(UartCtrl)
     );
-    
-    //  Executer
-    Executer Executer_inst (
-    .read_data_1(read_data_1),
-    .read_data_2(read_data_2),
-    .Sign_extend(Sign_extend),
-    .Func_opcode(Instruction[5:0]),
-    .Opcode(Instruction[31:26]),
-    .Shamt(Instruction[10:6]),
-    .branch_base_addr(branch_base_addr),
-    .ALUOp(ALUOp),
-    .ALUSrc(ALUSrc),
-    .I_format(I_format),
-    .Sftmd(Sftmd),
-    .Jr(Jr),
-    .Zero(Zero),
-    .ALU_result(ALU_result),
-    .Addr_result(Addr_result)
-    );
 
     Switch Switch_inst(
     .clk(cpu_clk),
@@ -225,12 +225,11 @@ module CPU(input fpga_clk,        //100mHz
     LED LED_inst(
     .clk(cpu_clk),
     .rst(rst),
-    .LEDWrite(led),
+    .LED(led),
+    .LEDWrite(IOWrite),
     .LEDCtrl(LEDCtrl),
     .LEDAddr(ALU_result[1:0]),
-    .LEDWdata(write_data),
-    .LED(LED)
+    .LEDWdata(write_data)
     );
-
 
 endmodule
