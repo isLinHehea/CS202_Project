@@ -26,7 +26,7 @@ module Decoder(input clk, rst,
                input[31:0] ALU_result,    // from Executer
                input Jal,
                input RegWrite,
-               input MemOrIOtoReg,
+               input MemtoReg,
                input RegDST,
                input[31:0] link_addr,     // from iFetch, pc + 4 for jal use
                output[31:0] Sign_extend,
@@ -49,7 +49,7 @@ module Decoder(input clk, rst,
         end
         else begin
             if ((RegWrite || Jal) && write_reg != 0) begin
-                register[write_reg] <= ((6'b000011 == opcode && 1'b1 == Jal)?link_addr:(MemOrIOtoReg?mem_data:ALU_result));
+                register[write_reg] <= ((6'b000011 == opcode && 1'b1 == Jal)?link_addr:(MemtoReg?mem_data:ALU_result));
             end
         end
     end
