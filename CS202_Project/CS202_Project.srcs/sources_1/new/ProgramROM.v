@@ -37,7 +37,7 @@ module ProgramROM (input rom_clk_i,             // ROM clock
     programROM  ProgramROM_inst(
     .clka (kickOff ? rom_clk_i : upg_clk_i),
     .wea (kickOff ? 1'b0 : upg_wen_i),
-    .addra (kickOff ? rom_adr_i/4 : upg_adr_i),
+    .addra (kickOff ? rom_adr_i : upg_adr_i),
     .dina (kickOff ? 32'h00000000 : upg_dat_i),
     .douta (Instruction_o)
     );

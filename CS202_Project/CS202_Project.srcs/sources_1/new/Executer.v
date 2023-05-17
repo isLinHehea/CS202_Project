@@ -90,5 +90,5 @@ module Executer(input[31:0] read_data_1,      //the source of inputA
     end
 
     assign Zero = (ALU_output_mux == 32'b0) ? 1'b1 : 1'b0;
-    assign Addr_Result = branch_base_addr[31:2] + (Sign_extend << 2);
+    assign Addr_result = branch_base_addr[31:2] + (Sign_extend << 2);
 endmodule

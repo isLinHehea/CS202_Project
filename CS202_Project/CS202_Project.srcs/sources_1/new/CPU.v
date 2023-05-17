@@ -163,7 +163,7 @@ module CPU(input fpga_clk,        //100mHz
     DMemory DMemory_inst (
     .ram_clk_i(cpu_clk),
     .ram_wen_i(MemWrite),
-    .ram_adr_i(addr_out[15:2]),
+    .ram_adr_i(addr_out),
     .ram_dat_i(write_data),
     .ram_dat_o(ram_dat_o),
     .upg_rst_i(upg_rst),
@@ -228,7 +228,7 @@ module CPU(input fpga_clk,        //100mHz
     .LEDWrite(IOWrite),
     .LEDCtrl(LEDCtrl),
     .LEDAddr(ALU_result[1:0]),
-    .LEDWdata(write_data)
+    .LEDWdata(write_data[15:0])
     );
 
 endmodule
