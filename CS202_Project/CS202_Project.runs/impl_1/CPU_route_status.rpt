@@ -13,6 +13,9 @@ Design Route Status
            # of internally routed nets........ :         326 :
        # of routable nets..................... :         523 :
            # of fully routed nets............. :         523 :
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
        # of nets with routing errors.......... :           0 :
    ------------------------------------------- : ----------- :

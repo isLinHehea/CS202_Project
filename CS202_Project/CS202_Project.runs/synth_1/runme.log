@@ -15,9 +15,15 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
 <<<<<<< HEAD
+<<<<<<< HEAD
 INFO: Helper process launched with PID 8660 
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 343.945 ; gain = 102.281
+=======
+INFO: Helper process launched with PID 5384 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 343.965 ; gain = 102.215
+>>>>>>> parent of 84af03e (LJJ)
 =======
 INFO: Helper process launched with PID 5384 
 ---------------------------------------------------------------------------------
@@ -28,24 +34,33 @@ INFO: [Synth 8-638] synthesizing module 'CPU' [D:/LearningMaterials/CS202/Projec
 INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-256] done synthesizing module 'BUFG' (1#1) [D:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
 <<<<<<< HEAD
+<<<<<<< HEAD
 INFO: [Synth 8-638] synthesizing module 'cpu_clk' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/realtime/cpu_clk_stub.v:5]
 INFO: [Synth 8-256] done synthesizing module 'cpu_clk' (2#1) [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/realtime/cpu_clk_stub.v:5]
 INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/realtime/uart_bmpg_0_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (3#1) [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/realtime/uart_bmpg_0_stub.v:6]
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
 INFO: [Synth 8-638] synthesizing module 'cpu_clk' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/realtime/cpu_clk_stub.v:5]
 INFO: [Synth 8-256] done synthesizing module 'cpu_clk' (2#1) [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/realtime/cpu_clk_stub.v:5]
 INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/realtime/uart_bmpg_0_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (3#1) [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/realtime/uart_bmpg_0_stub.v:6]
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 INFO: [Synth 8-638] synthesizing module 'IFetch' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/IFetch.v:23]
 WARNING: [Synth 8-5788] Register link_addr_reg in module IFetch is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/IFetch.v:55]
 INFO: [Synth 8-256] done synthesizing module 'IFetch' (4#1) [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/IFetch.v:23]
 INFO: [Synth 8-638] synthesizing module 'ProgramROM' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/ProgramROM.v:23]
 <<<<<<< HEAD
+<<<<<<< HEAD
 INFO: [Synth 8-638] synthesizing module 'programROM' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/realtime/programROM_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'programROM' (5#1) [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/realtime/programROM_stub.v:6]
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
 INFO: [Synth 8-638] synthesizing module 'programROM' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/realtime/programROM_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'programROM' (5#1) [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/realtime/programROM_stub.v:6]
 WARNING: [Synth 8-689] width (32) of port connection 'addra' does not match port width (14) of module 'programROM' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/ProgramROM.v:40]
@@ -57,9 +72,12 @@ INFO: [Synth 8-638] synthesizing module 'Controller' [D:/LearningMaterials/CS202
 INFO: [Synth 8-256] done synthesizing module 'Controller' (8#1) [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/Controller.v:23]
 INFO: [Synth 8-638] synthesizing module 'DMemory' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/DMemory.v:23]
 <<<<<<< HEAD
+<<<<<<< HEAD
 INFO: [Synth 8-638] synthesizing module 'RAM' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/realtime/RAM_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'RAM' (9#1) [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/realtime/RAM_stub.v:6]
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
 INFO: [Synth 8-638] synthesizing module 'RAM' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/realtime/RAM_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'RAM' (9#1) [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/realtime/RAM_stub.v:6]
 WARNING: [Synth 8-689] width (32) of port connection 'addra' does not match port width (14) of module 'RAM' [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/new/DMemory.v:44]
@@ -136,7 +154,11 @@ WARNING: [Synth 8-3331] design CPU has unconnected port seg_out1[1]
 WARNING: [Synth 8-3331] design CPU has unconnected port seg_out1[0]
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 396.309 ; gain = 154.645
+=======
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 396.309 ; gain = 154.559
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 396.309 ; gain = 154.559
 >>>>>>> parent of 84af03e (LJJ)
@@ -150,7 +172,11 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 396.309 ; gain = 154.645
+=======
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 396.309 ; gain = 154.559
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 396.309 ; gain = 154.559
 >>>>>>> parent of 84af03e (LJJ)
@@ -161,6 +187,7 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 <<<<<<< HEAD
+<<<<<<< HEAD
 Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/dcp4/RAM_in_context.xdc] for cell 'ProgramROM_inst/ProgramROM_inst'
 Finished Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/dcp4/RAM_in_context.xdc] for cell 'ProgramROM_inst/ProgramROM_inst'
 Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/dcp5/clk_wiz_0_in_context.xdc] for cell 'cpu_clk_inst'
@@ -170,6 +197,8 @@ Finished Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS20
 Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/dcp7/RAM_in_context.xdc] for cell 'DMemory_inst/RAM_inst'
 Finished Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/dcp7/RAM_in_context.xdc] for cell 'DMemory_inst/RAM_inst'
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
 Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/dcp4/RAM_in_context.xdc] for cell 'ProgramROM_inst/ProgramROM_inst'
 Finished Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/dcp4/RAM_in_context.xdc] for cell 'ProgramROM_inst/ProgramROM_inst'
 Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/dcp5/clk_wiz_0_in_context.xdc] for cell 'cpu_clk_inst'
@@ -178,6 +207,9 @@ Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project
 Finished Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart_inst'
 Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/dcp7/RAM_in_context.xdc] for cell 'DMemory_inst/RAM_inst'
 Finished Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/dcp7/RAM_in_context.xdc] for cell 'DMemory_inst/RAM_inst'
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/constrs_1/new/CPU.xdc]
 Finished Parsing XDC File [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/constrs_1/new/CPU.xdc]
@@ -191,9 +223,15 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 735.711 ; gain = 0.000
 ---------------------------------------------------------------------------------
 Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 735.711 ; gain = 494.047
+=======
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 736.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 736.773 ; gain = 495.023
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 736.773 ; gain = 0.000
 ---------------------------------------------------------------------------------
@@ -206,7 +244,11 @@ Start Loading Part and Timing Information
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 735.711 ; gain = 494.047
+=======
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 736.773 ; gain = 495.023
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 736.773 ; gain = 495.023
 >>>>>>> parent of 84af03e (LJJ)
@@ -215,8 +257,13 @@ Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapse
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Applied set_property IO_BUFFER_TYPE = NONE for fpga_clk. (constraint file  D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/dcp5/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for fpga_clk. (constraint file  D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-20988-LAPTOP-7DFI8QQJ/dcp5/clk_wiz_0_in_context.xdc, line 5).
+=======
+Applied set_property IO_BUFFER_TYPE = NONE for fpga_clk. (constraint file  D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/dcp5/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for fpga_clk. (constraint file  D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/dcp5/clk_wiz_0_in_context.xdc, line 5).
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Applied set_property IO_BUFFER_TYPE = NONE for fpga_clk. (constraint file  D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/dcp5/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for fpga_clk. (constraint file  D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/.Xil/Vivado-11416-LAPTOP-7DFI8QQJ/dcp5/clk_wiz_0_in_context.xdc, line 5).
@@ -227,7 +274,11 @@ Applied set_property DONT_TOUCH = true for cpu_clk_inst. (constraint file  auto 
 Applied set_property DONT_TOUCH = true for uart_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 735.711 ; gain = 494.047
+=======
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 736.773 ; gain = 495.023
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 736.773 ; gain = 495.023
 >>>>>>> parent of 84af03e (LJJ)
@@ -278,7 +329,11 @@ INFO: [Synth 8-5544] ROM "SwitchRdata" won't be mapped to Block RAM because addr
 INFO: [Synth 8-5544] ROM "LED" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 735.711 ; gain = 494.047
+=======
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 736.773 ; gain = 495.023
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 736.773 ; gain = 495.023
 >>>>>>> parent of 84af03e (LJJ)
@@ -430,7 +485,11 @@ WARNING: [Synth 8-3331] design CPU has unconnected port seg_out1[1]
 WARNING: [Synth 8-3331] design CPU has unconnected port seg_out1[0]
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:01:00 . Memory (MB): peak = 735.711 ; gain = 494.047
+=======
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 736.773 ; gain = 495.023
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 736.773 ; gain = 495.023
 >>>>>>> parent of 84af03e (LJJ)
@@ -449,7 +508,11 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'cpu_clk_inst/upg_clk' to 
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:01:07 . Memory (MB): peak = 774.582 ; gain = 532.918
+=======
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:32 . Memory (MB): peak = 763.656 ; gain = 521.906
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:32 . Memory (MB): peak = 763.656 ; gain = 521.906
 >>>>>>> parent of 84af03e (LJJ)
@@ -459,7 +522,11 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:25 . Memory (MB): peak = 893.504 ; gain = 651.840
+=======
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:37 . Memory (MB): peak = 864.457 ; gain = 622.707
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:37 . Memory (MB): peak = 864.457 ; gain = 622.707
 >>>>>>> parent of 84af03e (LJJ)
@@ -475,7 +542,11 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:01:31 . Memory (MB): peak = 922.820 ; gain = 681.156
+=======
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:38 . Memory (MB): peak = 887.477 ; gain = 645.727
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:38 . Memory (MB): peak = 887.477 ; gain = 645.727
 >>>>>>> parent of 84af03e (LJJ)
@@ -503,7 +574,11 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:01:32 . Memory (MB): peak = 922.820 ; gain = 681.156
+=======
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
 >>>>>>> parent of 84af03e (LJJ)
@@ -520,7 +595,11 @@ Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:01:32 . Memory (MB): peak = 922.820 ; gain = 681.156
+=======
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
 >>>>>>> parent of 84af03e (LJJ)
@@ -536,7 +615,11 @@ Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:01:32 . Memory (MB): peak = 922.820 ; gain = 681.156
+=======
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
 >>>>>>> parent of 84af03e (LJJ)
@@ -546,7 +629,11 @@ Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:01:32 . Memory (MB): peak = 922.820 ; gain = 681.156
+=======
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
 >>>>>>> parent of 84af03e (LJJ)
@@ -556,7 +643,11 @@ Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:01:32 . Memory (MB): peak = 922.820 ; gain = 681.156
+=======
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
 >>>>>>> parent of 84af03e (LJJ)
@@ -566,7 +657,11 @@ Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:01:32 . Memory (MB): peak = 922.820 ; gain = 681.156
+=======
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
 >>>>>>> parent of 84af03e (LJJ)
@@ -623,17 +718,23 @@ Report Instance Areas:
 +------+------------------+-----------+------+
 ---------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:01:32 . Memory (MB): peak = 922.820 ; gain = 681.156
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 32 warnings.
 Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:01:26 . Memory (MB): peak = 922.820 ; gain = 341.754
 Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:01:33 . Memory (MB): peak = 922.820 ; gain = 681.156
 =======
+=======
+>>>>>>> parent of 84af03e (LJJ)
 Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 126 warnings.
 Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:33 . Memory (MB): peak = 887.477 ; gain = 305.262
 Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 887.477 ; gain = 645.727
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 299 Unisim elements for replacement
@@ -648,11 +749,19 @@ INFO: [Common 17-83] Releasing license: Synthesis
 92 Infos, 92 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
 <<<<<<< HEAD
+<<<<<<< HEAD
 synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:01:36 . Memory (MB): peak = 922.820 ; gain = 692.641
 INFO: [Common 17-1381] The checkpoint 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/CPU.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CPU_utilization_synth.rpt -pb CPU_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 922.820 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Wed May 17 22:57:11 2023...
+=======
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:43 . Memory (MB): peak = 887.477 ; gain = 657.219
+INFO: [Common 17-1381] The checkpoint 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/CPU.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file CPU_utilization_synth.rpt -pb CPU_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 887.477 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue May 16 02:16:24 2023...
+>>>>>>> parent of 84af03e (LJJ)
 =======
 synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:43 . Memory (MB): peak = 887.477 ; gain = 657.219
 INFO: [Common 17-1381] The checkpoint 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/synth_1/CPU.dcp' has been generated.

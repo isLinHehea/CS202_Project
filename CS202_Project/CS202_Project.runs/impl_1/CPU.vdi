@@ -3,8 +3,13 @@
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Start of session at: Wed May 17 22:57:18 2023
 # Process ID: 17652
+=======
+# Start of session at: Tue May 16 02:16:31 2023
+# Process ID: 13544
+>>>>>>> parent of 84af03e (LJJ)
 =======
 # Start of session at: Tue May 16 02:16:31 2023
 # Process ID: 13544
@@ -138,7 +143,11 @@ Resolution: The tool has removed redundant OBUF. To resolve this warning, check 
 WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. uart_inst/inst/upg_inst/upg_wen_o_OBUF_inst 
 Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
 <<<<<<< HEAD
+<<<<<<< HEAD
 WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'cpu_clk_inst/fpga_clk' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/impl_1/.Xil/Vivado-17652-LAPTOP-7DFI8QQJ/dcp4/clk_wiz_0.edf:268]
+=======
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'cpu_clk_inst/fpga_clk' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/impl_1/.Xil/Vivado-13544-LAPTOP-7DFI8QQJ/dcp4/clk_wiz_0.edf:268]
+>>>>>>> parent of 84af03e (LJJ)
 =======
 WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'cpu_clk_inst/fpga_clk' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/impl_1/.Xil/Vivado-13544-LAPTOP-7DFI8QQJ/dcp4/clk_wiz_0.edf:268]
 >>>>>>> parent of 84af03e (LJJ)
@@ -148,7 +157,11 @@ Parsing XDC File [d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project
 INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/cpu_clk/cpu_clk.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [d:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.srcs/sources_1/ip/cpu_clk/cpu_clk.xdc:57]
 <<<<<<< HEAD
+<<<<<<< HEAD
 get_clocks: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1131.891 ; gain = 559.004
+=======
+get_clocks: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1132.531 ; gain = 559.008
+>>>>>>> parent of 84af03e (LJJ)
 =======
 get_clocks: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1132.531 ; gain = 559.008
 >>>>>>> parent of 84af03e (LJJ)
@@ -162,7 +175,11 @@ No Unisim elements were transformed.
 13 Infos, 56 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
 <<<<<<< HEAD
+<<<<<<< HEAD
 link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1131.891 ; gain = 900.648
+=======
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 1132.531 ; gain = 901.559
+>>>>>>> parent of 84af03e (LJJ)
 =======
 link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 1132.531 ; gain = 901.559
 >>>>>>> parent of 84af03e (LJJ)
@@ -177,7 +194,11 @@ INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.497 . Memory (MB): peak = 1131.891 ; gain = 0.000
+=======
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.562 . Memory (MB): peak = 1132.531 ; gain = 0.000
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.562 . Memory (MB): peak = 1132.531 ; gain = 0.000
 >>>>>>> parent of 84af03e (LJJ)
@@ -189,9 +210,15 @@ Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 16 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
 <<<<<<< HEAD
+<<<<<<< HEAD
 Phase 1 Retarget | Checksum: 9de19819
 
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.251 . Memory (MB): peak = 1144.914 ; gain = 0.000
+=======
+Phase 1 Retarget | Checksum: 132d3bd04
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.239 . Memory (MB): peak = 1145.039 ; gain = 0.000
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Phase 1 Retarget | Checksum: 132d3bd04
 
@@ -201,6 +228,7 @@ INFO: [Opt 31-389] Phase Retarget created 10 cells and removed 12 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+<<<<<<< HEAD
 <<<<<<< HEAD
 Phase 2 Constant propagation | Checksum: 1000697b0
 
@@ -227,6 +255,10 @@ Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.519 . Memory (MB): peak = 1144.914
 =======
 Phase 2 Constant propagation | Checksum: 1b66da37c
 
+=======
+Phase 2 Constant propagation | Checksum: 1b66da37c
+
+>>>>>>> parent of 84af03e (LJJ)
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.355 . Memory (MB): peak = 1145.039 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 65 cells and removed 98 cells
 
@@ -247,11 +279,15 @@ Phase 5 Shift Register Optimization
 Phase 5 Shift Register Optimization | Checksum: 1a91a4e75
 
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.977 . Memory (MB): peak = 1145.039 ; gain = 0.000
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1144.914 ; gain = 0.000
 Ending Logic Optimization Task | Checksum: f9e2b995
@@ -291,6 +327,18 @@ Ending Power Optimization Task | Checksum: 2229069c8
 
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1145.039 ; gain = 0.000
 >>>>>>> parent of 84af03e (LJJ)
+=======
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1145.039 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1b898700a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.989 . Memory (MB): peak = 1145.039 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 2229069c8
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1145.039 ; gain = 0.000
+>>>>>>> parent of 84af03e (LJJ)
 INFO: [Common 17-83] Releasing license: Implementation
 35 Infos, 56 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
@@ -300,7 +348,11 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 <<<<<<< HEAD
+<<<<<<< HEAD
 Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1359.074 ; gain = 0.000
+=======
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1145.039 ; gain = 0.000
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1145.039 ; gain = 0.000
 >>>>>>> parent of 84af03e (LJJ)
@@ -374,6 +426,7 @@ Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
 <<<<<<< HEAD
+<<<<<<< HEAD
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1359.074 ; gain = 0.000
 Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 8dadb2c0
 
@@ -381,6 +434,15 @@ Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1359.074
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1359.074 ; gain = 0.000
+=======
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1145.039 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1e3151819
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1145.039 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1145.039 ; gain = 0.000
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1145.039 ; gain = 0.000
 Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1e3151819
@@ -405,6 +467,7 @@ WARNING: [Place 30-568] A LUT 'ProgramROM_inst/ProgramROM_inst_i_1' is driving c
 	ProgramROM_inst/ProgramROM_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram {RAMB36E1}
 	ProgramROM_inst/ProgramROM_inst/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram {RAMB36E1}
 INFO: [Timing 38-35] Done setting XDC timing constraints.
+<<<<<<< HEAD
 <<<<<<< HEAD
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: a40815a7
 
@@ -450,10 +513,34 @@ Phase 2 Global Placement | Checksum: 195bd2e37
 
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
 >>>>>>> parent of 84af03e (LJJ)
+=======
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: c60aabec
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.761 . Memory (MB): peak = 1145.039 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 14be0e27e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.922 . Memory (MB): peak = 1145.039 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 14be0e27e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.925 . Memory (MB): peak = 1145.039 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 14be0e27e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.926 . Memory (MB): peak = 1145.039 ; gain = 0.000
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 195bd2e37
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+>>>>>>> parent of 84af03e (LJJ)
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
+<<<<<<< HEAD
 <<<<<<< HEAD
 Phase 3.1 Commit Multi Column Macros | Checksum: 15a2daeb8
 
@@ -519,6 +606,25 @@ Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; g
 Phase 3.4 Pipeline Register Optimization
 Phase 3.4 Pipeline Register Optimization | Checksum: 1a25e177a
 
+=======
+Phase 3.1 Commit Multi Column Macros | Checksum: 195bd2e37
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: dbf448d9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1a25e177a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1a25e177a
+
+>>>>>>> parent of 84af03e (LJJ)
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
@@ -538,6 +644,9 @@ Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; g
 Phase 3 Detail Placement | Checksum: 1c44720cd
 
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 
 Phase 4 Post Placement Optimization and Clean-Up
@@ -547,7 +656,11 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
 <<<<<<< HEAD
+<<<<<<< HEAD
 Post Placement Optimization Initialization | Checksum: d81dcd49
+=======
+Post Placement Optimization Initialization | Checksum: 102dcaa59
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Post Placement Optimization Initialization | Checksum: 102dcaa59
 >>>>>>> parent of 84af03e (LJJ)
@@ -555,6 +668,7 @@ Post Placement Optimization Initialization | Checksum: 102dcaa59
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
 INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+<<<<<<< HEAD
 <<<<<<< HEAD
 Phase 4.1.1.1 BUFG Insertion | Checksum: d81dcd49
 
@@ -620,6 +734,39 @@ Ending Placer Task | Checksum: 144761fb4
 
 Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
 >>>>>>> parent of 84af03e (LJJ)
+=======
+Phase 4.1.1.1 BUFG Insertion | Checksum: 102dcaa59
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=95.644. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 17008fb7f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 17008fb7f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 17008fb7f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 17008fb7f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 23a33f5ea
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 23a33f5ea
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+Ending Placer Task | Checksum: 144761fb4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1145.039 ; gain = 0.000
+>>>>>>> parent of 84af03e (LJJ)
 INFO: [Common 17-83] Releasing license: Implementation
 57 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
@@ -629,6 +776,7 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 <<<<<<< HEAD
+<<<<<<< HEAD
 Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.297 . Memory (MB): peak = 1359.074 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/impl_1/CPU_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file CPU_io_placed.rpt
@@ -637,6 +785,16 @@ INFO: [runtcl-4] Executing : report_utilization -file CPU_utilization_placed.rpt
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1359.074 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file CPU_control_sets_placed.rpt
 report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1359.074 ; gain = 0.000
+=======
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1145.039 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/impl_1/CPU_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file CPU_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1145.039 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file CPU_utilization_placed.rpt -pb CPU_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1145.039 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file CPU_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1145.039 ; gain = 0.000
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1145.039 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/LearningMaterials/CS202/Project/CS202_Project/CS202_Project/CS202_Project.runs/impl_1/CPU_placed.dcp' has been generated.
@@ -659,6 +817,7 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 <<<<<<< HEAD
+<<<<<<< HEAD
 Checksum: PlaceDB: 663671a ConstDB: 0 ShapeSum: a770ef6f RouteDB: 0
 
 Phase 1 Build RT Design
@@ -675,10 +834,20 @@ Phase 1 Build RT Design | Checksum: 1633ddfe2
 Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1262.207 ; gain = 117.168
 Post Restoration Checksum: NetGraph: c39179b9 NumContArr: 9fac6629 Constraints: 0 Timing: 0
 >>>>>>> parent of 84af03e (LJJ)
+=======
+Checksum: PlaceDB: 717607da ConstDB: 0 ShapeSum: d30017da RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 1633ddfe2
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1262.207 ; gain = 117.168
+Post Restoration Checksum: NetGraph: c39179b9 NumContArr: 9fac6629 Constraints: 0 Timing: 0
+>>>>>>> parent of 84af03e (LJJ)
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
+<<<<<<< HEAD
 <<<<<<< HEAD
 Phase 2.1 Create Timer | Checksum: 1d73a58a7
 
@@ -740,10 +909,42 @@ Phase 3 Initial Routing | Checksum: 154a74577
 
 Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
 >>>>>>> parent of 84af03e (LJJ)
+=======
+Phase 2.1 Create Timer | Checksum: 1633ddfe2
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1262.207 ; gain = 117.168
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 1633ddfe2
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1262.207 ; gain = 117.168
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 1633ddfe2
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1262.207 ; gain = 117.168
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 183f75415
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=95.708 | TNS=0.000  | WHS=-0.138 | THS=-5.496 |
+
+Phase 2 Router Initialization | Checksum: 19f3145d8
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 154a74577
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+>>>>>>> parent of 84af03e (LJJ)
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
+<<<<<<< HEAD
 <<<<<<< HEAD
  Number of Nodes with overlaps = 1527
  Number of Nodes with overlaps = 527
@@ -799,6 +1000,17 @@ Phase 4.1 Global Iteration 0 | Checksum: 150791a68
 Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
 
 Phase 4.2 Global Iteration 1
+=======
+ Number of Nodes with overlaps = 32
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=94.817 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 150791a68
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+
+Phase 4.2 Global Iteration 1
+>>>>>>> parent of 84af03e (LJJ)
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
 INFO: [Route 35-416] Intermediate Timing Summary | WNS=94.817 | TNS=0.000  | WHS=N/A    | THS=N/A    |
@@ -809,6 +1021,9 @@ Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; g
 Phase 4 Rip-up And Reroute | Checksum: 135fd17fb
 
 Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+<<<<<<< HEAD
+>>>>>>> parent of 84af03e (LJJ)
+=======
 >>>>>>> parent of 84af03e (LJJ)
 
 Phase 5 Delay and Skew Optimization
@@ -816,6 +1031,7 @@ Phase 5 Delay and Skew Optimization
 Phase 5.1 Delay CleanUp
 Phase 5.1 Delay CleanUp | Checksum: 135fd17fb
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 Phase 5.1.1 Update Timing
 Phase 5.1.1 Update Timing | Checksum: 13662ebed
@@ -846,12 +1062,24 @@ Phase 5 Delay and Skew Optimization | Checksum: 135fd17fb
 
 Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
 >>>>>>> parent of 84af03e (LJJ)
+=======
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 135fd17fb
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+Phase 5 Delay and Skew Optimization | Checksum: 135fd17fb
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+>>>>>>> parent of 84af03e (LJJ)
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
+<<<<<<< HEAD
 <<<<<<< HEAD
 Phase 6.1.1 Update Timing | Checksum: 14f1a04e2
 
@@ -877,13 +1105,31 @@ Phase 6 Post Hold Fix | Checksum: 1a87d0991
 
 Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
 >>>>>>> parent of 84af03e (LJJ)
+=======
+Phase 6.1.1 Update Timing | Checksum: 10301ccfd
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=94.817 | TNS=0.000  | WHS=0.026  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1a87d0991
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+Phase 6 Post Hold Fix | Checksum: 1a87d0991
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+>>>>>>> parent of 84af03e (LJJ)
 
 Phase 7 Route finalize
 
 Router Utilization Summary
 <<<<<<< HEAD
+<<<<<<< HEAD
   Global Vertical Routing Utilization    = 3.18536 %
   Global Horizontal Routing Utilization  = 3.64133 %
+=======
+  Global Vertical Routing Utilization    = 0.0707965 %
+  Global Horizontal Routing Utilization  = 0.0899271 %
+>>>>>>> parent of 84af03e (LJJ)
 =======
   Global Vertical Routing Utilization    = 0.0707965 %
   Global Horizontal Routing Utilization  = 0.0899271 %
@@ -896,6 +1142,7 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 Utilization threshold used for congestion level computation: 0.85
 Congestion Report
@@ -917,10 +1164,16 @@ Phase 7 Route finalize | Checksum: 193d2967a
 
 Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
 >>>>>>> parent of 84af03e (LJJ)
+=======
+Phase 7 Route finalize | Checksum: 193d2967a
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+>>>>>>> parent of 84af03e (LJJ)
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
+<<<<<<< HEAD
 <<<<<<< HEAD
 Phase 8 Verifying routed nets | Checksum: 1d58b834d
 
@@ -963,13 +1216,38 @@ INFO: [Route 35-16] Router Completed Successfully
 
 Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
 >>>>>>> parent of 84af03e (LJJ)
+=======
+Phase 8 Verifying routed nets | Checksum: 193d2967a
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 184f4b111
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=94.817 | TNS=0.000  | WHS=0.026  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 184f4b111
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.207 ; gain = 117.168
+>>>>>>> parent of 84af03e (LJJ)
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 75 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
 <<<<<<< HEAD
+<<<<<<< HEAD
 route_design: Time (s): cpu = 00:03:32 ; elapsed = 00:04:22 . Memory (MB): peak = 1385.902 ; gain = 26.828
+=======
+route_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1262.207 ; gain = 117.168
+>>>>>>> parent of 84af03e (LJJ)
 =======
 route_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1262.207 ; gain = 117.168
 >>>>>>> parent of 84af03e (LJJ)
@@ -978,7 +1256,11 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 <<<<<<< HEAD
+<<<<<<< HEAD
 Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.415 . Memory (MB): peak = 1385.902 ; gain = 0.000
+=======
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.177 . Memory (MB): peak = 1262.207 ; gain = 0.000
+>>>>>>> parent of 84af03e (LJJ)
 =======
 Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.177 . Memory (MB): peak = 1262.207 ; gain = 0.000
 >>>>>>> parent of 84af03e (LJJ)
@@ -1102,8 +1384,13 @@ INFO: [Common 17-83] Releasing license: Implementation
 104 Infos, 149 Warnings, 1 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
 <<<<<<< HEAD
+<<<<<<< HEAD
 write_bitstream: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1760.391 ; gain = 374.488
 INFO: [Common 17-206] Exiting Vivado at Wed May 17 23:02:37 2023...
+=======
+write_bitstream: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1676.953 ; gain = 394.109
+INFO: [Common 17-206] Exiting Vivado at Tue May 16 02:17:28 2023...
+>>>>>>> parent of 84af03e (LJJ)
 =======
 write_bitstream: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1676.953 ; gain = 394.109
 INFO: [Common 17-206] Exiting Vivado at Tue May 16 02:17:28 2023...
