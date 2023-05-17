@@ -1,12 +1,13 @@
-#0xFFFF_FFFC70 : input from 16 switch
-#0xFFFF_FFFC60 : output to 16 LED
-#0xFFFF_FFFC62 : output to 16 LED and blink
+#0xFFFF_FC70 : input from 16 switch
+#0xFFFF_FC60 : output to 16 LED
+#0xFFFF_FC62 : output to 16 LED and blink
 
 .data
 
 .text
 
 forever:
+
 	lw $t1, 0XC70($31) # input the testcase id
 	andi $t2,$t1,0x00000080
 	beq $t2,1,select
@@ -19,7 +20,7 @@ beq $t1,0,case0
 beq $t1,1,case1
 beq $t1,2,case2
 beq $t1,3,case3
-beq $t1,4,case4x
+beq $t1,4,case4
 beq $t1,5,case5
 beq $t1,6,case6
 beq $t1,7,case7
