@@ -18,8 +18,6 @@ module segs(input clk,
     reg[3:0] disp_dat    = 0;
     reg[2:0] disp_bit    = 0;
     reg [3:0] num0, num1, num2, num3, num4, num5, num6, num7;
-    reg SEG;
-    reg Sign;
     reg[15:0] data;
     
     always@(posedge clk)begin
@@ -52,10 +50,10 @@ module segs(input clk,
         end
         else if (SEGCtrl == 1'b1 && IOWrite == 1'b1) begin
             if (segaddr == 2'b00 || segaddr == 2'b10) begin
-                data <= (Sign == 1'b0) ? segwdata : ~segwdata + 1;
+                data <= (segaddr == 2'b00) ? segwdata : ~segwdata + 1;
+                num5 <= (segaddr == 2'b00) ? 4'h0 : 4'hf;
                 num7 <= 4'h2;
                 num6 <= 4'h0;
-                num5 <= 4'h0;
                 num4 <= data[15:0] / 1_0_000 % 10;
                 num3 <= data[15:0] / 1_000 % 10;
                 num2 <= data[15:0] / 1_00 % 10;
@@ -160,7 +158,7 @@ module segs(input clk,
                 4'hc : seg0 = 8'h9c;
                 4'hd : seg0 = 8'h7a;
                 4'he : seg0 = 8'h9e;
-                4'hf : seg0 = 8'h8e;
+                4'hf : seg0 = 8'h05;
             endcase
         end
         else begin

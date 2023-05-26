@@ -84,7 +84,7 @@ module cpu(input fpga_clk,  // FPGA EGO1 Clock
     wire [1:0] switchaddr, ledaddr;
     wire [15:0] switchrdata;
     wire [13:0] fetch_addr;
-    wire SwitchCtrl, LEDCtrl, SEGCtrl;
+    wire SwitchCtrl, LEDCtrl, SEGCtrl, VGACtrl;
     
     
     //  Instruction Memory
@@ -206,6 +206,7 @@ module cpu(input fpga_clk,  // FPGA EGO1 Clock
     .addr_out(addr_out),
     .LEDCtrl(LEDCtrl),
     .SEGCtrl(SEGCtrl),
+    .VGACtrl(VGACtrl),
     .SwitchCtrl(SwitchCtrl)
     );
     
@@ -245,8 +246,12 @@ module cpu(input fpga_clk,  // FPGA EGO1 Clock
 
     vgas vgas_inst(
     .clk(fpga_clk),
-    .state(kickOff),
-    .result(write_data[15:0]),
+    .rst(rst),
+    .kickOff(kickOff),
+    .IOWrite(IOWrite),
+    .VGACtrl(VGACtrl),
+    .vgaaddr(addr_out[1:0]),
+    .vgawdata(write_data[15:0]),
     .rgb(rgb),
     .hsync(hsync),
     .vsync(vsync)

@@ -1,11 +1,15 @@
 `timescale 1ns / 1ps
 
 module vgas (input clk,           // 100MHz system clock
-            input state,         // CPU state
-            input [15:0] result, // data
-            output [11:0] rgb,   // Red, green and blue color signals
-            output hsync,        // Line synchronization signal
-            output vsync);       // Field synchronization signal
+             input rst,
+             input IOWrite,
+             input VGACtrl,
+             input kickOff,          // CPU state
+             input[1:0] vgaaddr,
+             input [15:0] vgawdata,  // data
+             output [11:0] rgb,    // Red, green and blue color signals
+             output hsync,         // Line synchronization signal
+             output vsync);        // Field synchronization signal
     //parameter define
     parameter
     HDAT_BEGIN = 10'd144,
@@ -37,6 +41,7 @@ module vgas (input clk,           // 100MHz system clock
     reg [63:0] mile_after[392:0];
     reg [5:0] let0, let1, let2, let3, let4, let5;
     reg [3:0] num0, num1, num2, num3, num4, num5, num6;
+    reg[15:0] wdata;
     
     parameter
     A = 6'b00_1010,
@@ -121,7 +126,7 @@ module vgas (input clk,           // 100MHz system clock
     end
         
     always @(posedge vga_clk) begin
-        casex (state)
+        casex (kickOff)
             1'b0: begin
                 let0 <= C;
                 let1 <= O;
@@ -139,6 +144,48 @@ module vgas (input clk,           // 100MHz system clock
                 let5 <= L;
             end
         endcase
+    end
+
+    always@(posedge vga_clk or posedge rst) begin
+        if (rst) begin
+            num6 <= 4'h0;
+            num5 <= 4'h0;
+            num4 <= 4'h0;
+            num3 <= 4'h0;
+            num2 <= 4'h0;
+            num1 <= 4'h0;
+            num0 <= 4'h0;
+        end
+        else if (VGACtrl == 1'b1 && IOWrite == 1'b1) begin
+            if (vgaaddr == 2'b00 || vgaaddr == 2'b10) begin
+                wdata <= (vgaaddr == 2'b00) ? vgawdata : ~vgawdata + 1;
+                num5 <= (vgaaddr == 2'b00) ? 4'h0 : 4'hf;
+                num6 <= 4'h0;
+                num4 <= wdata[15:0] / 1_0_000 % 10;
+                num3 <= wdata[15:0] / 1_000 % 10;
+                num2 <= wdata[15:0] / 1_00 % 10;
+                num1 <= wdata[15:0] / 1_0 % 10;
+                num0 <= wdata[15:0] / 1 % 10;
+            end
+            else begin
+                num6 <= num6;
+                num5 <= num5;
+                num4 <= num4;
+                num3 <= num3;
+                num2 <= num2;
+                num1 <= num1;
+                num0 <= num0;
+            end
+        end
+        else begin
+            num6 <= num6;
+            num5 <= num5;
+            num4 <= num4;
+            num3 <= num3;
+            num2 <= num2;
+            num1 <= num1;
+            num0 <= num0;
+        end
     end
         
     vga_let_ram_module letter_0 (
@@ -353,18 +400,9 @@ module vgas (input clk,           // 100MHz system clock
 
     //---------------------------------------------------------
     
-    always @(posedge vga_clk) begin
-        num5 <= result / 1_000_00 % 10;
-        num4 <= result / 1_000_0 % 10;
-        num3 <= result / 1_000 % 10;
-        num2 <= result / 1_00 % 10;
-        num1 <= result / 1_0 % 10;
-        num0 <= result % 10;
-    end
-    
     vga_num_ram_module number_6 (
     .clk (vga_clk),
-    .data(4'b0000),
+    .data(num6),
     .col0(mile[0]),
     .col1(mile[1]),
     .col2(mile[2]),
@@ -439,7 +477,7 @@ module vgas (input clk,           // 100MHz system clock
       .col4(mile[46]),
       .col5(mile[47]),
       .col6(mile[48])
-  );
+    );
 endmodule
             
             

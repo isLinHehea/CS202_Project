@@ -14,6 +14,7 @@ module MemOrIO(input mRead,
                output[31:0] addr_out,        // address to data memory
                output LEDCtrl,
                output SEGCtrl,
+               output VGACtrl,
                output SwitchCtrl);
     
     assign addr_out = addr_in;
@@ -21,6 +22,7 @@ module MemOrIO(input mRead,
     // may from memory or I/O, if from I/O, it is rdata's lower 16bit
     assign LEDCtrl    = (IOWrite == 1'b1 && addr_in[7:4] == 4'b0110)?1'b1:1'b0; // ledCtrl, 1 is effective;
     assign SEGCtrl    = (IOWrite == 1'b1 && addr_in[7:4] == 4'b0101)?1'b1:1'b0; //segCtrl, 1 is effective
+    assign VGACtrl    = (IOWrite == 1'b1 && addr_in[7:4] == 4'b1001)?1'b1:1'b0; //vgaCtrl, 1 is effective
     assign SwitchCtrl = (IORead == 1'b1 && addr_in[7:4] == 4'b0111)?1'b1:1'b0; //switchCtrl, 1 is effective
     
     always @*begin
