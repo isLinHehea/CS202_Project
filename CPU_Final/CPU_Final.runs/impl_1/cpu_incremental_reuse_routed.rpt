@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Fri May 26 13:42:23 2023
+| Date         : Fri May 26 15:09:23 2023
 | Host         : LAPTOP-7DFI8QQJ running 64-bit major release  (build 9200)
 | Command      : report_incremental_reuse -file cpu_incremental_reuse_routed.rpt
 | Design       : cpu
@@ -24,9 +24,9 @@ Table of Contents
 +-------+----------------------+--------------------+--------------------+-------+
 |  Type | Matched % (of Total) | Reuse % (of Total) | Fixed % (of Total) | Total |
 +-------+----------------------+--------------------+--------------------+-------+
-| Cells |                94.02 |              91.58 |               1.25 |  5989 |
-| Nets  |                93.36 |              71.22 |               0.00 |  4893 |
-| Pins  |                    - |              60.37 |                  - | 27069 |
+| Cells |                79.22 |              65.17 |               1.25 |  5953 |
+| Nets  |                84.60 |              40.88 |               0.00 |  4880 |
+| Pins  |                    - |              56.95 |                  - | 27160 |
 | Ports |               100.00 |             100.00 |             100.00 |    75 |
 +-------+----------------------+--------------------+--------------------+-------+
 
@@ -59,11 +59,11 @@ Table of Contents
 +-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
 |      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
 +-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
-| synth_design    |             |             |       00:02 |       00:03 |             |             |
+| synth_design    |             |             |       00:02 |       00:02 |             |             |
 | opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
 | read_checkpoint |             |             |             |     < 1 min |             |     < 1 min |
-| place_design    |       0.711 |       0.848 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
-| route_design    |       1.130 |       1.580 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| place_design    |       0.711 |       0.500 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| route_design    |       1.130 |       1.052 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
 +-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 
@@ -73,12 +73,12 @@ Table of Contents
 +------------------------------------------------------+-------+
 |                         Type                         |   %   |
 +------------------------------------------------------+-------+
-| Non-Reused Cells                                     |  8.41 |
-|   New                                                |  5.97 |
-|   Discarded illegal placement due to netlist changes |  2.13 |
-|   Discarded to improve timing                        |  0.30 |
-| Partially reused nets                                |  0.00 |
-| Non-Reused nets                                      | 28.77 |
+| Non-Reused Cells                                     | 34.82 |
+|   New                                                | 20.61 |
+|   Discarded illegal placement due to netlist changes |  8.23 |
+|   Discarded to improve timing                        |  5.98 |
+| Partially reused nets                                | 23.75 |
+| Non-Reused nets                                      | 35.36 |
 | Non-Reused Ports                                     |  0.00 |
 +------------------------------------------------------+-------+
 

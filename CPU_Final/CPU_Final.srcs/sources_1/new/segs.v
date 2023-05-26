@@ -17,7 +17,7 @@ module segs(input clk,
     reg divclk           = 0;
     reg[3:0] disp_dat    = 0;
     reg[2:0] disp_bit    = 0;
-    reg [3:0] num0, num1, num2, num3, num4;
+    reg [3:0] num0, num1, num2, num3, num4, num5, num6, num7;
     reg SEG;
     reg Sign;
     reg[15:0] data;
@@ -36,262 +36,112 @@ module segs(input clk,
 
     always@(posedge clk or posedge rst) begin
         if (rst) begin
-            SEG <= 1'b0;
-        end
-        else if (SEGCtrl && IOWrite) begin
-            if (segaddr == 2'b00) begin
-                SEG  <= 1'b1;
-                Sign <= 1'b0;
-            end
-            else if (segaddr == 2'b10) begin
-                SEG  <= 1'b1;
-                Sign <= 1'b1;
-            end
-            else
-                SEG <= SEG;
-        end
-        else begin
-            SEG <= SEG;
-        end
-    end
-    
-    always@(posedge divclk) begin
-        if (SEG == 1'b0) begin
             if (kickOff == 1'b0) begin
-                if (disp_bit > 7) begin
-                    disp_bit <= 0;
-                end
-                else begin
-                    disp_bit <= disp_bit + 1'b1;
-                    case (disp_bit)
-                        3'b000 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00000001;//显示第一个数码管，低电平有效
-                        end
-                        3'b001 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00000010;//显示第二个数码管，低电平有效
-                        end
-                        3'b010 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00000100;//显示第三个数码管，低电平有效
-                        end
-                        3'b011 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00001000;//显示第四个数码管，低电平有效
-                        end
-                        3'b100 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00010000;//显示第五个数码管，低电平有效
-                        end
-                        3'b101 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00100000;//显示第六个数码管，低电平有效
-                        end
-                        3'b110 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b01000000;//显示第七个数码管，低电平有效
-                        end
-                        3'b111 :
-                        begin
-                            disp_dat <= 4'h1;
-                            an       <= 8'b10000000;//显示第八个数码管，低电平有效
-                        end
-                        default:
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00000000;
-                        end
-                    endcase
-                end
+                num7 <= 4'h1;
             end
             else begin
-                if (disp_bit > 7) begin
-                    disp_bit <= 0;
-                end
-                else begin
-                    disp_bit <= disp_bit + 1'b1;
-                    case (disp_bit)
-                        3'b000 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00000001;//显示第一个数码管，低电平有效
-                        end
-                        3'b001 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00000010;//显示第二个数码管，低电平有效
-                        end
-                        3'b010 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00000100;//显示第三个数码管，低电平有效
-                        end
-                        3'b011 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00001000;//显示第四个数码管，低电平有效
-                        end
-                        3'b100 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00010000;//显示第五个数码管，低电平有效
-                        end
-                        3'b101 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00100000;//显示第六个数码管，低电平有效
-                        end
-                        3'b110 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b01000000;//显示第七个数码管，低电平有效
-                        end
-                        3'b111 :
-                        begin
-                            disp_dat <= 4'h2;
-                            an       <= 8'b10000000;//显示第八个数码管，低电平有效
-                        end
-                        default:
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00000000;
-                        end
-                    endcase
-                end
+                num7 <= 4'h2;
+            end
+            num6 <= 4'h0;
+            num5 <= 4'h0;
+            num4 <= 4'h0;
+            num3 <= 4'h0;
+            num2 <= 4'h0;
+            num1 <= 4'h0;
+            num0 <= 4'h0;
+        end
+        else if (SEGCtrl == 1'b1 && IOWrite == 1'b1) begin
+            if (segaddr == 2'b00 || segaddr == 2'b10) begin
+                data <= (Sign == 1'b0) ? segwdata : ~segwdata + 1;
+                num7 <= 4'h2;
+                num6 <= 4'h0;
+                num5 <= 4'h0;
+                num4 <= data[15:0] / 1_0_000 % 10;
+                num3 <= data[15:0] / 1_000 % 10;
+                num2 <= data[15:0] / 1_00 % 10;
+                num1 <= data[15:0] / 1_0 % 10;
+                num0 <= data[15:0] / 1 % 10;
+            end
+            else begin
+                num7 <= num7;
+                num6 <= num6;
+                num5 <= num5;
+                num4 <= num4;
+                num3 <= num3;
+                num2 <= num2;
+                num1 <= num1;
+                num0 <= num0;
             end
         end
         else begin
-            data <= (Sign == 1'b0) ? segwdata : ~segwdata + 1;
-            
-            num4 <= data[15:0] / 1_0_000 % 10;
-            num3 <= data[15:0] / 1_000 % 10;
-            num2 <= data[15:0] / 1_00 % 10;
-            num1 <= data[15:0] / 1_0 % 10;
-            num0 <= data[15:0] / 1 % 10;
-            
-            if (Sign == 1'b0) begin
-                if (disp_bit > 7) begin
-                    disp_bit <= 0;
+            num7 <= num7;
+            num6 <= num6;
+            num5 <= num5;
+            num4 <= num4;
+            num3 <= num3;
+            num2 <= num2;
+            num1 <= num1;
+            num0 <= num0;
+        end
+    end
+
+    always@(posedge divclk) begin
+        if (disp_bit > 7) begin
+            disp_bit <= 0;
+        end
+        else begin
+            disp_bit <= disp_bit + 1'b1;
+            case (disp_bit)
+                3'b000 :
+                begin
+                    disp_dat <= num0;
+                    an       <= 8'b00000001;//显示第一个数码管，低电平有效
                 end
-                else begin
-                    disp_bit <= disp_bit + 1'b1;
-                    case (disp_bit)
-                        3'b000 :
-                        begin
-                            disp_dat <= num0;
-                            an       <= 8'b00000001;//显示第一个数码管，低电平有效
-                        end
-                        3'b001 :
-                        begin
-                            disp_dat <= num1;
-                            an       <= 8'b00000010;//显示第二个数码管，低电平有效
-                        end
-                        3'b010 :
-                        begin
-                            disp_dat <= num2;
-                            an       <= 8'b00000100;//显示第三个数码管，低电平有效
-                        end
-                        3'b011 :
-                        begin
-                            disp_dat <= num3;
-                            an       <= 8'b00001000;//显示第四个数码管，低电平有效
-                        end
-                        3'b100 :
-                        begin
-                            disp_dat <= num4;
-                            an       <= 8'b00010000;//显示第五个数码管，低电平有效
-                        end
-                        3'b101 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00100000;//显示第六个数码管，低电平有效
-                        end
-                        3'b110 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b01000000;//显示第七个数码管，低电平有效
-                        end
-                        3'b111 :
-                        begin
-                            disp_dat <= 4'h2;
-                            an       <= 8'b10000000;//显示第八个数码管，低电平有效
-                        end
-                        default:
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00000000;
-                        end
-                    endcase
+                3'b001 :
+                begin
+                    disp_dat <= num1;
+                    an       <= 8'b00000010;//显示第二个数码管，低电平有效
                 end
-            end
-            else begin
-                if (disp_bit > 7) begin
-                    disp_bit <= 0;
+                3'b010 :
+                begin
+                    disp_dat <= num2;
+                    an       <= 8'b00000100;//显示第三个数码管，低电平有效
                 end
-                else begin
-                    disp_bit <= disp_bit + 1'b1;
-                    case (disp_bit)
-                        3'b000 :
-                        begin
-                            disp_dat <= num0;
-                            an       <= 8'b00000001;//显示第一个数码管，低电平有效
-                        end
-                        3'b001 :
-                        begin
-                            disp_dat <= num1;
-                            an       <= 8'b00000010;//显示第二个数码管，低电平有效
-                        end
-                        3'b010 :
-                        begin
-                            disp_dat <= num2;
-                            an       <= 8'b00000100;//显示第三个数码管，低电平有效
-                        end
-                        3'b011 :
-                        begin
-                            disp_dat <= num3;
-                            an       <= 8'b00001000;//显示第四个数码管，低电平有效
-                        end
-                        3'b100 :
-                        begin
-                            disp_dat <= num4;
-                            an       <= 8'b00010000;//显示第五个数码管，低电平有效
-                        end
-                        3'b101 :
-                        begin
-                            disp_dat <= 4'hf;
-                            an       <= 8'b00100000;//显示第六个数码管，低电平有效
-                        end
-                        3'b110 :
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b01000000;//显示第七个数码管，低电平有效
-                        end
-                        3'b111 :
-                        begin
-                            disp_dat <= 4'h2;
-                            an       <= 8'b10000000;//显示第八个数码管，低电平有效
-                        end
-                        default:
-                        begin
-                            disp_dat <= 0;
-                            an       <= 8'b00000000;
-                        end
-                    endcase
+                3'b011 :
+                begin
+                    disp_dat <= num3;
+                    an       <= 8'b00001000;//显示第四个数码管，低电平有效
                 end
-            end
+                3'b100 :
+                begin
+                    disp_dat <= num4;
+                    an       <= 8'b00010000;//显示第五个数码管，低电平有效
+                end
+                3'b101 :
+                begin
+                    disp_dat <= num5;
+                    an       <= 8'b00100000;//显示第六个数码管，低电平有效
+                end
+                3'b110 :
+                begin
+                    disp_dat <= num6;
+                    an       <= 8'b01000000;//显示第七个数码管，低电平有效
+                end
+                3'b111 :
+                begin
+                    disp_dat <= num7;
+                    an       <= 8'b10000000;//显示第八个数码管，低电平有效
+                end
+                default:
+                begin
+                    disp_dat <= 0;
+                    an       <= 8'b00000000;
+                end
+            endcase
         end
     end
     
-    always@(disp_dat)
-    begin
+    always@(disp_dat) begin
         if (an > 8'b00001000) begin
             case (disp_dat)
                 //显示0—F
@@ -331,7 +181,7 @@ module segs(input clk,
                 4'hc : seg1 = 8'h9c;
                 4'hd : seg1 = 8'h7a;
                 4'he : seg1 = 8'h9e;
-                4'hf : seg1 = 8'hff;
+                4'hf : seg1 = 8'h05;
             endcase
         end
     end
