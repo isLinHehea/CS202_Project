@@ -148,7 +148,6 @@ module vgas (input clk,           // 100MHz system clock
 
     always@(posedge vga_clk or posedge rst) begin
         if (rst) begin
-            num6 <= 4'h0;
             num5 <= 4'h0;
             num4 <= 4'h0;
             num3 <= 4'h0;
@@ -160,7 +159,6 @@ module vgas (input clk,           // 100MHz system clock
             if (vgaaddr == 2'b00 || vgaaddr == 2'b10) begin
                 wdata <= (vgaaddr == 2'b00) ? vgawdata : ~vgawdata + 1;
                 num5 <= (vgaaddr == 2'b00) ? 4'h0 : 4'hf;
-                num6 <= 4'h0;
                 num4 <= wdata[15:0] / 1_0_000 % 10;
                 num3 <= wdata[15:0] / 1_000 % 10;
                 num2 <= wdata[15:0] / 1_00 % 10;
@@ -168,7 +166,6 @@ module vgas (input clk,           // 100MHz system clock
                 num0 <= wdata[15:0] / 1 % 10;
             end
             else begin
-                num6 <= num6;
                 num5 <= num5;
                 num4 <= num4;
                 num3 <= num3;
@@ -178,7 +175,6 @@ module vgas (input clk,           // 100MHz system clock
             end
         end
         else begin
-            num6 <= num6;
             num5 <= num5;
             num4 <= num4;
             num3 <= num3;
@@ -402,7 +398,7 @@ module vgas (input clk,           // 100MHz system clock
     
     vga_num_ram_module number_6 (
     .clk (vga_clk),
-    .data(num6),
+    .data(num5),
     .col0(mile[0]),
     .col1(mile[1]),
     .col2(mile[2]),
@@ -413,7 +409,7 @@ module vgas (input clk,           // 100MHz system clock
     );
     vga_num_ram_module number_5 (
     .clk (vga_clk),
-    .data(num5),
+    .data(num4),
     .col0(mile[7]),
     .col1(mile[8]),
     .col2(mile[9]),
@@ -424,7 +420,7 @@ module vgas (input clk,           // 100MHz system clock
     );
     vga_num_ram_module number_4 (
     .clk (vga_clk),
-    .data(num4),
+    .data(num3),
     .col0(mile[14]),
     .col1(mile[15]),
     .col2(mile[16]),
@@ -435,7 +431,7 @@ module vgas (input clk,           // 100MHz system clock
     );
     vga_num_ram_module number_3 (
     .clk (vga_clk),
-    .data(num3),
+    .data(num2),
     .col0(mile[21]),
     .col1(mile[22]),
     .col2(mile[23]),
@@ -446,7 +442,7 @@ module vgas (input clk,           // 100MHz system clock
     );
     vga_num_ram_module number_2 (
     .clk (vga_clk),
-    .data(num2),
+    .data(num1),
     .col0(mile[28]),
     .col1(mile[29]),
     .col2(mile[30]),
@@ -457,7 +453,7 @@ module vgas (input clk,           // 100MHz system clock
     );
     vga_num_ram_module number_1 (
     .clk (vga_clk),
-    .data(num1),
+    .data(num0),
     .col0(mile[35]),
     .col1(mile[36]),
     .col2(mile[37]),
@@ -466,10 +462,9 @@ module vgas (input clk,           // 100MHz system clock
     .col5(mile[40]),
     .col6(mile[41])
     );
-
     vga_num_ram_module number_0 (
       .clk (vga_clk),
-      .data(num0),
+      .data(4'he),
       .col0(mile[42]),
       .col1(mile[43]),
       .col2(mile[44]),

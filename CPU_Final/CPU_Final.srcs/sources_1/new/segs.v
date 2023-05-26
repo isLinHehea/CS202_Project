@@ -158,7 +158,7 @@ module segs(input clk,
                 4'hc : seg0 = 8'h9c;
                 4'hd : seg0 = 8'h7a;
                 4'he : seg0 = 8'h9e;
-                4'hf : seg0 = 8'h05;
+                4'hf : seg0 = 8'h02;
             endcase
         end
         else begin
@@ -179,7 +179,7 @@ module segs(input clk,
                 4'hc : seg1 = 8'h9c;
                 4'hd : seg1 = 8'h7a;
                 4'he : seg1 = 8'h9e;
-                4'hf : seg1 = 8'h05;
+                4'hf : seg1 = 8'h02;
             endcase
         end
     end

@@ -114,14 +114,22 @@ module vga_num_ram_module (input clk,              // 100MHz system clock
             4'b1111: // "-"
             begin
                 col0 <= 8'b0000_0000;
-                col1 <= 8'b0001_0000;
-                col2 <= 8'b0001_0000;
-                col3 <= 8'b0001_0000;
-                col4 <= 8'b0001_0000;
-                col5 <= 8'b0001_0000;
+                col1 <= 8'b0000_1000;
+                col2 <= 8'b0000_1000;
+                col3 <= 8'b0000_1000;
+                col4 <= 8'b0000_1000;
+                col5 <= 8'b0000_1000;
                 col6 <= 8'b0000_0000;
             end
-            default: begin
+            default: // ""
+            begin
+                col0 <= 8'b0000_0000;
+                col1 <= 8'b0000_0000;
+                col2 <= 8'b0000_0000;
+                col3 <= 8'b0000_0000;
+                col4 <= 8'b0000_0000;
+                col5 <= 8'b0000_0000;
+                col6 <= 8'b0000_0000;
             end
         endcase
     end

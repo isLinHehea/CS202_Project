@@ -1,5 +1,5 @@
 Name	Num
-add	3
+add	0
 addu	0
 sub	0
 subu	0
@@ -15,12 +15,12 @@ srav	0
 sll	0
 srl	0
 sra	0
-jr	1
+jr	0
 mfhi	0
 mflo	0
 mthi	0
 mtlo	0
-addi	3
+addi	0
 addiu	0
 andi	0
 ori	1
@@ -44,8 +44,8 @@ lhu	0
 sb	0
 sh	0
 lw	1
-sw	2
-beq	3
+sw	3
+beq	0
 bne	0
 bgez	0
 bgtz	0
@@ -53,7 +53,7 @@ bgezal	0
 blez	0
 bltz	0
 bltzal	0
-lui	4
-j	4
-jal	3
+lui	1
+j	1
+jal	0
 nop	0
