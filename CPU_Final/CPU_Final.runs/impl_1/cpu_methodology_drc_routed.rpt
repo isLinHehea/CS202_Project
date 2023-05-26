@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Fri May 26 19:41:47 2023
+| Date         : Fri May 26 20:37:22 2023
 | Host         : LAPTOP-7DFI8QQJ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file cpu_methodology_drc_routed.rpt -pb cpu_methodology_drc_routed.pb -rpx cpu_methodology_drc_routed.rpx
 | Design       : cpu
@@ -1523,7 +1523,7 @@ Related violations: <none>
 
 TIMING-17#295 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/num5_reg[3]/C is not reached by a timing clock
+The clock pin vgas_inst/num4_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#296 Warning
@@ -2168,137 +2168,137 @@ Related violations: <none>
 
 TIMING-17#424 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col1_reg[5]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col1_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#425 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col1_reg[6]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col1_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#426 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col2_reg[0]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col1_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#427 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col2_reg[1]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col2_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#428 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col2_reg[2]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col2_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#429 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col2_reg[3]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col2_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#430 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col2_reg[4]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col2_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#431 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col2_reg[5]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col2_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#432 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col2_reg[6]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col2_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#433 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col3_reg[0]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col2_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#434 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col3_reg[1]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col3_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#435 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col3_reg[2]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col3_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#436 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col3_reg[3]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col3_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#437 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col3_reg[4]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col3_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#438 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col3_reg[5]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col3_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#439 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col4_reg[0]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col3_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#440 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col4_reg[2]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col3_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#441 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col4_reg[3]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col4_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#442 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col4_reg[5]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col4_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#443 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col4_reg[6]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col4_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#444 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col5_reg[1]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col4_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#445 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col5_reg[2]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col4_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#446 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col5_reg[3]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col5_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#447 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col5_reg[4]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col5_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#448 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_5/col5_reg[5]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col5_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#449 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_6/col2_reg[0]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col5_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#450 Warning
 Non-clocked sequential cell  
-The clock pin vgas_inst/number_6/col2_reg[3]/C is not reached by a timing clock
+The clock pin vgas_inst/number_5/col5_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#451 Warning

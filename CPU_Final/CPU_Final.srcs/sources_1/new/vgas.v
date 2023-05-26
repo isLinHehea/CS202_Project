@@ -148,17 +148,17 @@ module vgas (input clk,           // 100MHz system clock
 
     always@(posedge vga_clk or posedge rst) begin
         if (rst) begin
-            num5 <= 4'h0;
-            num4 <= 4'h0;
-            num3 <= 4'h0;
-            num2 <= 4'h0;
-            num1 <= 4'h0;
-            num0 <= 4'h0;
+            num5 <= 4'he;
+            num4 <= 4'he;
+            num3 <= 4'he;
+            num2 <= 4'he;
+            num1 <= 4'he;
+            num0 <= 4'he;
         end
         else if (VGACtrl == 1'b1 && IOWrite == 1'b1) begin
             if (vgaaddr == 2'b00 || vgaaddr == 2'b10) begin
                 wdata <= (vgaaddr == 2'b00) ? vgawdata : ~vgawdata + 1;
-                num5 <= (vgaaddr == 2'b00) ? 4'h0 : 4'hf;
+                num5 <= (vgaaddr == 2'b00) ? 4'he : (vgaaddr[15] == 1'b1) ? 4'hf : 4'he;
                 num4 <= wdata[15:0] / 1_0_000 % 10;
                 num3 <= wdata[15:0] / 1_000 % 10;
                 num2 <= wdata[15:0] / 1_00 % 10;

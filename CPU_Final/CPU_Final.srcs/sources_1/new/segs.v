@@ -40,20 +40,20 @@ module segs(input clk,
             else begin
                 num7 <= 4'h2;
             end
-            num6 <= 4'h0;
-            num5 <= 4'h0;
-            num4 <= 4'h0;
-            num3 <= 4'h0;
-            num2 <= 4'h0;
-            num1 <= 4'h0;
-            num0 <= 4'h0;
+            num6 <= 4'he;
+            num5 <= 4'he;
+            num4 <= 4'he;
+            num3 <= 4'he;
+            num2 <= 4'he;
+            num1 <= 4'he;
+            num0 <= 4'he;
         end
         else if (SEGCtrl == 1'b1 && IOWrite == 1'b1) begin
             if (segaddr == 2'b00 || segaddr == 2'b10) begin
                 data <= (segaddr == 2'b00) ? segwdata : ~segwdata + 1;
-                num5 <= (segaddr == 2'b00) ? 4'h0 : 4'hf;
+                num5 <= (segaddr == 2'b00) ? 4'he : (segwdata[15] == 1'b1) ? 4'hf : 4'he;
                 num7 <= 4'h2;
-                num6 <= 4'h0;
+                num6 <= 4'he;
                 num4 <= data[15:0] / 1_0_000 % 10;
                 num3 <= data[15:0] / 1_000 % 10;
                 num2 <= data[15:0] / 1_00 % 10;
@@ -157,7 +157,7 @@ module segs(input clk,
                 4'hb : seg0 = 8'h3e;
                 4'hc : seg0 = 8'h9c;
                 4'hd : seg0 = 8'h7a;
-                4'he : seg0 = 8'h9e;
+                4'he : seg0 = 8'h00;
                 4'hf : seg0 = 8'h02;
             endcase
         end
@@ -178,7 +178,7 @@ module segs(input clk,
                 4'hb : seg1 = 8'h3e;
                 4'hc : seg1 = 8'h9c;
                 4'hd : seg1 = 8'h7a;
-                4'he : seg1 = 8'h9e;
+                4'he : seg1 = 8'h00;
                 4'hf : seg1 = 8'h02;
             endcase
         end
