@@ -113,8 +113,6 @@ start_step place_design
 set ACTIVE_STEP place_design
 set rc [catch {
   create_msg_db place_design.pb
-  read_checkpoint -incremental D:/LearningMaterials/CS202/Project/CS202_Project/CPU_Final/impl/cpu_routed.dcp
-  catch { report_incremental_reuse -file cpu_incremental_reuse_pre_placed.rpt }
   implement_debug_core 
   place_design 
   write_checkpoint -force cpu_placed.dcp

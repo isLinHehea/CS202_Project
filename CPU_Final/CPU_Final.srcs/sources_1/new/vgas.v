@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 
-module vgas (input clk,           // 100MHz system clock
-             input rst,
-             input IOWrite,
-             input VGACtrl,
-             input kickOff,          // CPU state
-             input[1:0] vgaaddr,
-             input [15:0] vgawdata,  // data
-             output [11:0] rgb,    // Red, green and blue color signals
-             output hsync,         // Line synchronization signal
-             output vsync);        // Field synchronization signal
+module vgas (input clk,             // 100MHz system clock
+             input rst,             // Reset
+             input IOWrite,         // IO sign
+             input VGACtrl,         // VGA ctrl
+             input kickOff,         // CPU state
+             input[1:0] vgaaddr,    // VGA address
+             input [15:0] vgawdata, // VGA write data
+             output [11:0] rgb,     // Red, green and blue color signals
+             output hsync,          // Line synchronization signal
+             output vsync);         // Field synchronization signal
     //parameter define
     parameter
     HDAT_BEGIN = 10'd144,
@@ -90,14 +90,14 @@ module vgas (input clk,           // 100MHz system clock
     always @(posedge vga_clk) begin
         for (i = 0; i < 336; i = i + 1) begin
             for (j = 0; j < 64; j = j + 1) begin
-                st[i][j]  = p[i/8][j/8];
-                st1[i][j] = p1[i/8][j/8];
+                st[i][j]  <= p[i/8][j/8];
+                st1[i][j] <= p1[i/8][j/8];
             end
         end
         for (i = 0; i < 392; i = i + 1) begin
             for (j = 0; j < 64; j = j + 1) begin
-                st2[i][j]        = p2[i/8][j/8];
-                mile_after[i][j] = mile[i/8][j/8];
+                st2[i][j]        <= p2[i/8][j/8];
+                mile_after[i][j] <= mile[i/8][j/8];
             end
         end
         if (hcount >= 272 && vcount >= 120 && hcount - 272 <= 391 && vcount - 120 <= 255) begin
@@ -158,7 +158,7 @@ module vgas (input clk,           // 100MHz system clock
         else if (VGACtrl == 1'b1 && IOWrite == 1'b1) begin
             if (vgaaddr == 2'b00 || vgaaddr == 2'b10) begin
                 wdata <= (vgaaddr == 2'b00) ? vgawdata : ~vgawdata + 1;
-                num5 <= (vgaaddr == 2'b00) ? 4'he : (vgaaddr[15] == 1'b1) ? 4'hf : 4'he;
+                num5 <= (vgaaddr == 2'b00) ? 4'he : (vgawdata[15] == 1'b1) ? 4'hf : 4'he;
                 num4 <= wdata[15:0] / 1_0_000 % 10;
                 num3 <= wdata[15:0] / 1_000 % 10;
                 num2 <= wdata[15:0] / 1_00 % 10;

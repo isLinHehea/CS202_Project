@@ -1,37 +1,36 @@
 `timescale 1ns / 1ps
 
-module cpu(input fpga_clk,  // FPGA EGO1 Clock
-           input fpga_rst,  // FPGA EGO1 Reset
-           input start_pg,  // Uart Start
-           input rx,
-           output tx,
-           input[15:0] switch,  // Switch
-           output wire [15:0] led,  // LED
-           output[7:0] an,  // 位选，低有效
-           output[7:0] seg0,  // 段选，高有效
+module cpu(input fpga_clk,         // FPGA EGO1 Clock
+           input fpga_rst,         // FPGA EGO1 Reset
+           input start_pg,         // Uart Start
+           input rx,               // Receive
+           output tx,              // Transmit
+           input[15:0] switch,     // Switch
+           output wire [15:0] led, // LED
+           // SEG
+           output[7:0] an,         // Bit selective signal
+           output[7:0] seg0,       // Segment-selected signal
            output[7:0] seg1,
            // VGA
-           output [11:0] rgb,  // Red, green and blue color signals
-           output hsync,  // Line synchronization signal
-           output vsync  // Field synchronization signal
-           );
+           output [11:0] rgb,      // Red, green and blue color signals
+           output hsync,           // Line synchronization signal
+           output vsync);          // Field synchronization signal
     
-    
+    // UART Programmer Pinouts
     wire cpu_clk, upg_clk_i, upg_clk_o;
-    wire upg_wen_o;   //Uart write out e
-    wire upg_done_o;  //Uart rx data have done
-    wire [14:0] upg_adr_o;  //data to which memory unit of program_rom/dmemory32
-    wire [31:0] upg_dat_o;  //data to program_rom or dmemory32
+    wire upg_wen_o;   // Uart write out enable
+    wire upg_done_o;  // Uart rx data have done
+    wire [14:0] upg_adr_o;  // Data to which memory unit of program_rom/dmemory32
+    wire [31:0] upg_dat_o;  // Data to program_rom or dmemory32
     wire spg_bufg, fpga_rst_o;
     reg upg_rst;
     wire rst;
     wire kickOff = upg_rst | (~upg_rst & upg_done_o);
-
     
     BUFG U1(.I(start_pg), .O(spg_bufg));
     BUFG U2(.I(fpga_rst), .O(fpga_rst_o));
     always @ (posedge fpga_clk) begin
-        if (spg_bufg) upg_rst  = 0;
+        if (spg_bufg) upg_rst    = 0;
         if (!fpga_rst_o) upg_rst = 1;
     end
     assign rst = !fpga_rst_o | !upg_rst;  //Reset
@@ -66,7 +65,7 @@ module cpu(input fpga_clk,  // FPGA EGO1 Clock
     wire IOWrite;
     wire I_format;
     wire Sftmd;
-        
+    
     wire [31:0] Instruction;
     wire [31:0] branch_base_addr;
     wire [31:0] Addr_Result;
@@ -80,12 +79,9 @@ module cpu(input fpga_clk,  // FPGA EGO1 Clock
     wire [31:0] ram_dat_o;
     wire [31:0] addr_out;
     wire [31:0] write_data;
-    wire [15:0] io_rdata;
-    wire [1:0] switchaddr, ledaddr;
     wire [15:0] switchrdata;
     wire [13:0] fetch_addr;
     wire SwitchCtrl, LEDCtrl, SEGCtrl, VGACtrl;
-    
     
     //  Instruction Memory
     ProgramROM ProgramROM_inst(
@@ -170,7 +166,6 @@ module cpu(input fpga_clk,  // FPGA EGO1 Clock
     .ALUSrc(ALUSrc),
     .I_format(I_format),
     .Zero(Zero),
-    .Jr(Jr),
     .Sftmd(Sftmd),
     .ALU_result(ALU_result),
     .Addr_result(Addr_Result),
@@ -192,6 +187,7 @@ module cpu(input fpga_clk,  // FPGA EGO1 Clock
     .upg_done_i(upg_done_o)
     );
     
+    //  Memory Or IO
     MemOrIO memorio(
     .addr_in(ALU_result),
     .mRead(mRead),
@@ -199,10 +195,10 @@ module cpu(input fpga_clk,  // FPGA EGO1 Clock
     .IORead(IORead),
     .IOWrite(IOWrite),
     .m_rdata(ram_dat_o),
-    .io_rdata(io_rdata),
+    .io_rdata(switchrdata),
     .r_rdata(read_data_2),
-    .r_wdata(mem_data),// data from memory or IO
-    .write_data(write_data),// data to memory or IO
+    .r_wdata(mem_data),
+    .write_data(write_data),
     .addr_out(addr_out),
     .LEDCtrl(LEDCtrl),
     .SEGCtrl(SEGCtrl),
@@ -210,17 +206,18 @@ module cpu(input fpga_clk,  // FPGA EGO1 Clock
     .SwitchCtrl(SwitchCtrl)
     );
     
+    //  Switch
     switchs switchs_inst(
     .clk(cpu_clk),
     .rst(rst),
     .IORead(IORead),
-    .io_rdata(io_rdata),
     .SwitchCtrl(SwitchCtrl),
     .switchaddr(addr_out[1:0]),
     .switchrdata(switchrdata),
     .switch(switch)
     );
     
+    //  LED
     leds leds_inst(
     .clk(cpu_clk),
     .rst(rst),
@@ -230,7 +227,8 @@ module cpu(input fpga_clk,  // FPGA EGO1 Clock
     .ledwdata(write_data[15:0]),
     .led(led)
     );
-
+    
+    //  SEG
     segs segs_inst(
     .clk(cpu_clk),
     .rst(rst),
@@ -243,7 +241,8 @@ module cpu(input fpga_clk,  // FPGA EGO1 Clock
     .seg0(seg0),
     .seg1(seg1)
     );
-
+    
+    //  VGA
     vgas vgas_inst(
     .clk(fpga_clk),
     .rst(rst),

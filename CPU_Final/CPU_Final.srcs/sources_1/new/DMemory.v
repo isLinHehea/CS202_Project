@@ -2,9 +2,9 @@
 
 
 
-module DMemory(input ram_clk_i,
+module DMemory(input ram_clk_i,        // CPU clock
                input ram_wen_i,        // from Controller, MemWrite
-               input[31:0] ram_adr_i,  // from memorio, root back to alu_result
+               input[31:0] ram_adr_i,  // from Alu_result of ALU
                input[31:0] ram_dat_i,  // from read_data_2 of Decoder
                output[31:0] ram_dat_o, // the data read out from data-ram
                

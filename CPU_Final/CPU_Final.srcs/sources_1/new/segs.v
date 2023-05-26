@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 
-module segs(input clk,
-            input rst,
-            input kickOff,
-            input IOWrite,
-            input SEGCtrl,
-            input[1:0] segaddr,
-            input[15:0] segwdata,
-            output reg[7:0] an,
-            output reg[7:0] seg0,
+module segs(input clk,                  // 20MHz CPU clk
+            input rst,                  // Reset
+            input kickOff,              // CPU mode
+            input IOWrite,              // IO sign
+            input SEGCtrl,              // SEG ctrl
+            input[1:0] segaddr,         // SEG address
+            input[15:0] segwdata,       // SEG write data
+            output reg[7:0] an,         // Bit selective signal
+            output reg[7:0] seg0,       // Segment-selected signal
             output reg[7:0] seg1);
     
     parameter cnt        = 5_000;
