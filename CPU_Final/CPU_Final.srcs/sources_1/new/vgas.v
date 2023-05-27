@@ -157,7 +157,7 @@ module vgas (input clk,             // 100MHz system clock
         end
         else if (VGACtrl == 1'b1 && IOWrite == 1'b1) begin
             if (vgaaddr == 2'b00 || vgaaddr == 2'b10) begin
-                wdata <= (vgaaddr == 2'b00) ? vgawdata : ~vgawdata + 1;
+                wdata <= (vgaaddr == 2'b00) ? vgawdata : (vgawdata[15] == 1'b1) ? ~vgawdata + 1 : vgawdata;
                 num5 <= (vgaaddr == 2'b00) ? 4'he : (vgawdata[15] == 1'b1) ? 4'hf : 4'he;
                 num4 <= wdata[15:0] / 1_0_000 % 10;
                 num3 <= wdata[15:0] / 1_000 % 10;

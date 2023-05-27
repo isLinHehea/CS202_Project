@@ -50,7 +50,7 @@ module segs(input clk,                  // 20MHz CPU clk
         end
         else if (SEGCtrl == 1'b1 && IOWrite == 1'b1) begin
             if (segaddr == 2'b00 || segaddr == 2'b10) begin
-                data <= (segaddr == 2'b00) ? segwdata : ~segwdata + 1;
+                data <= (segaddr == 2'b00) ? segwdata : (segwdata[15] == 1'b1) ? ~segwdata + 1 : segwdata;
                 num5 <= (segaddr == 2'b00) ? 4'he : (segwdata[15] == 1'b1) ? 4'hf : 4'he;
                 num7 <= 4'h2;
                 num6 <= 4'he;
