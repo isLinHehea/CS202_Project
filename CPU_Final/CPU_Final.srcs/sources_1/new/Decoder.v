@@ -71,7 +71,7 @@ module Decoder(input clk,                 // CPU clock
             for(i = 0; i <= 31; i = i + 1) begin
                 register[i] <= 32'h0000_0000;
             end
-            register[29] = 32'h0000_FFFF;
+            register[29] = 32'h0000_FF00;
         end
         else begin
             if ((RegWrite || Jal) && write_register_address != 0) begin
