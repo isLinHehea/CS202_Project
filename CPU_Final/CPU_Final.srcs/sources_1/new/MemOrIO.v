@@ -12,6 +12,8 @@ module MemOrIO(input mRead,                  // Read memory, from Controller
                input[31:0] r_rdata,          // Data read from Decoder(register file)
                output[31:0] r_wdata,         // Data to Decoder(register file)
                output reg [31:0] write_data, // Data to memory or I/O
+               output reg [31:0] write_data_seg, // Data to I/O
+               output reg [31:0] write_data_vga, // Data to I/O
                output LEDCtrl,               // LED Chip Select
                output SEGCtrl,               // SEG Chip Select
                output VGACtrl,               // VGA Chip Select
@@ -27,9 +29,13 @@ module MemOrIO(input mRead,                  // Read memory, from Controller
     always @*begin
         if ((mWrite == 1'b1)||(IOWrite == 1'b1)) begin
             write_data = ((mWrite == 1'b1)?r_rdata:{16'h0000,r_rdata[15:0]});
+            write_data_seg = {16'h0000,r_rdata[15:0]};
+            write_data_vga = {16'h0000,r_rdata[15:0]};
             end
         else begin
             write_data = 32'hZZZZ_ZZZZ;
+            write_data_seg = 32'hZZZZ_ZZZZ;
+            write_data_vga = 32'hZZZZ_ZZZZ;
         end
     end
 endmodule

@@ -79,6 +79,8 @@ module cpu(input fpga_clk,         // FPGA EGO1 Clock
     wire [31:0] ram_dat_o;
     wire [31:0] addr_out;
     wire [31:0] write_data;
+    wire [31:0] write_data_seg;
+    wire [31:0] write_data_vga;
     wire [15:0] switchrdata;
     wire [13:0] fetch_addr;
     wire SwitchCtrl, LEDCtrl, SEGCtrl, VGACtrl;
@@ -199,6 +201,8 @@ module cpu(input fpga_clk,         // FPGA EGO1 Clock
     .r_rdata(read_data_2),
     .r_wdata(mem_data),
     .write_data(write_data),
+    .write_data_seg(write_data_seg),
+    .write_data_vga(write_data_vga),
     .addr_out(addr_out),
     .LEDCtrl(LEDCtrl),
     .SEGCtrl(SEGCtrl),
@@ -236,7 +240,7 @@ module cpu(input fpga_clk,         // FPGA EGO1 Clock
     .IOWrite(IOWrite),
     .SEGCtrl(SEGCtrl),
     .segaddr(addr_out[1:0]),
-    .segwdata(write_data[15:0]),
+    .segwdata(write_data_seg[15:0]),
     .an(an),
     .seg0(seg0),
     .seg1(seg1)
@@ -250,7 +254,7 @@ module cpu(input fpga_clk,         // FPGA EGO1 Clock
     .IOWrite(IOWrite),
     .VGACtrl(VGACtrl),
     .vgaaddr(addr_out[1:0]),
-    .vgawdata(write_data[15:0]),
+    .vgawdata(write_data_vga[15:0]),
     .rgb(rgb),
     .hsync(hsync),
     .vsync(vsync)
