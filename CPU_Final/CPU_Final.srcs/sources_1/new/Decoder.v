@@ -68,10 +68,10 @@ module Decoder(input clk,                 // CPU clock
     integer i;
     always @(posedge clk) begin
         if (rst == 1'b1) begin
-            for(i = 0; i <= 31; i = i + 1) begin
+            for(i = 0; i <= 28 && i != 29; i = i + 1) begin
                 register[i] <= 32'h0000_0000;
             end
-            register[29] <= 32'h0000_FF00;
+            register[29] <= 32'h0000_FFFF;
         end
         else begin
             if ((RegWrite || Jal) && write_register_address != 0) begin
