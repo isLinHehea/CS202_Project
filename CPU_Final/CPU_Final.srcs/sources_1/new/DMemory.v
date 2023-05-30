@@ -1,7 +1,5 @@
 `timescale 1ns / 1ps
 
-
-
 module DMemory(input ram_clk_i,        // CPU clock
                input ram_wen_i,        // from Controller, MemWrite
                input[31:0] ram_adr_i,  // from Alu_result of ALU
